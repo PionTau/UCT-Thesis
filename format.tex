@@ -1,0 +1,241 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     This is format.tex file needed for the dmathesis.cls file.  You    %
+%  have to  put this file in the same directory with your thesis files.  %
+%                Written by M. Imran 2001/06/18                          % 
+%                 No Copyright for this file                             % 
+%                 Save your time and enjoy it                            % 
+%                                                                        % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Put packages you want to use here and 'fancyhdr' is required   %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\usepackage{epsfig}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{theorem}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epic}
+\usepackage{slashed}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	citecolor=red,
+	linktocpage,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                 Set line spacing = 1.5 here                   %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\baselinestretch}{1.5}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                      Your fancy heading                       %%%%%%
+%%%%% For the final copy you need to remove '\bfseries\today' below %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markright{\chaptername\ \thechapter.\ #1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}{}}
+\lhead[\fancyplain{}{}]%
+      {\fancyplain{}{\bfseries\rightmark}}
+\chead[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\rhead[\fancyplain{}{}]%
+      {\fancyplain{}{\bfseries\thepage}}
+\lfoot[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\cfoot[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\rfoot[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%Here you set the space between the main text%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%and the start of the footnote%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtolength{\skip\footins}{5mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Define new counter so you can have the equation           %%%%%
+%%%%%    number 4.2.1a for example, this a gift from J.F.Blowey      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{ind}
+\def\eqlabon{
+\setcounter{ind}{\value{equation}}\addtocounter{ind}{1}
+\setcounter{equation}{0}
+\renewcommand{\theequation}{\arabic{chapter}%
+         .\arabic{section}.\arabic{ind}\alph{equation}}}
+\def\eqlaboff{
+\renewcommand{\theequation}{\arabic{chapter}%
+         .\arabic{section}.\arabic{equation}}
+\setcounter{equation}{\value{ind}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%           New theorem you want to use              %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\theorembodyfont{\rmfamily}\newtheorem{Pro}{{\textbf Proposition}}[section]}
+{\theorembodyfont{\rmfamily}\newtheorem{The}{{\textbf Theorem}}[section]}
+{\theorembodyfont{\rmfamily}\newtheorem{Def}[The]{{\textbf Definition}}}
+{\theorembodyfont{\rmfamily}\newtheorem{Cor}[The]{{\textbf Corollary}}}
+{\theorembodyfont{\rmfamily}\newtheorem{Lem}[The]{{\textbf Lemma}}}
+{\theorembodyfont{\rmfamily}\newtheorem{Exp}{{\textbf Example}}[section]}
+\def\remark{\textbf{Remark}:}
+\def\remarks{\textbf{Remarks}:}
+\def\bproof{\textbf{Proof}: }
+\def\eproof{\hfill$\Box$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%    Bold font in math mode, a gift from J.F.Blowey       %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\bv#1{\mbox{\boldmath$#1$}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%        New symbol which is not defined in Latex         %%%%%%%%%%
+%%%%%%%                 a gift from J.F.Blowey                  %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Mean INTegral
+% to be used in displaystyle
+\def\mint{\textstyle\mints\displaystyle}
+% to be used in textstyle
+\def\mints{\int\!\!\!\!\!\!{\rm-}\ }
+%
+% The Mean SUM
+% to be used in displaystyle
+\def\msum{\textstyle\msums\displaystyle}
+% to be used in textstyle
+\def\msums{\sum\!\!\!\!\!\!\!{\rm-}\ }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%            Define your short cut here              %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\poincare{Poincar\'e }
+\def\holder{H\"older }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%      MHV Techniques (Tanjona Radonirina)           %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*************************MHV TECHNIQUES PACKAGES AND SETTINGS*******************************************
+
+\usepackage{ytableau}
+
+\newcommand\encircle[1]{%
+	\tikz[baseline=(X.base)] 
+	\node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
+
+%Angle and Square brakets
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\Abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\soft}[3]{\frac{\braket{#1 #2}}{\braket{#1 #3} \braket{#3 #2}}}
+\newcommand{\qsoft}[3]{\frac{[#1 #2]}{[#1 #3] [#3 #2]}}
+\newcommand{\ssoft}[2]{S_{#1 , #2}^{\sigma_3}}
+\newcommand{\xsoft}[2]{S_{#1 , #2}^{\sigma_4}}
+\newcommand{\ysoft}[2]{S_{#1 , #2}^{\sigma_5}}
+
+%For the soft factor
+\newcommand{\ggsoft}[3]{\begin{tikzpicture} [scale=0.5]
+	\draw [thick, fill=lightgray] (0,0) circle [radius=0.5];
+	\draw [gluon, thick] (-0.353553391,0.353553391)--(-1.5,1.45);
+	\draw [gluon, thick] (0.353553391,0.353553391)--(1.5,1.45);
+	\draw [gluon, thick, color=blue] (0,0.5)--(0,1.85);
+	\node at (-1.77,1.8) {#1};
+	\node at (0,2.1) {\textcolor{blue}{#2}};
+	\node at (1.77,1.8) {#3};
+	\end{tikzpicture}}
+\newcommand{\ggsoftblue}[3]{\begin{tikzpicture} [scale=0.5]
+	\draw [thick, fill=lightgray] (0,0) circle [radius=0.5];
+	\draw [gluon, thick, color=blue] (-0.353553391,0.353553391)--(-1.5,1.45);
+	\draw [gluon, thick] (0.353553391,0.353553391)--(1.5,1.45);
+	\draw [gluon, thick, color=blue] (0,0.5)--(0,1.85);
+	\node at (-1.77,1.8) {\textcolor{blue}{#1}};
+	\node at (0,2.1) {\textcolor{blue}{#2}};
+	\node at (1.77,1.8) {#3};
+	\end{tikzpicture}}
+\newcommand{\pgsoft}[3]{\begin{tikzpicture} [scale=0.5]
+	\draw [thick, fill=lightgray] (0,0) circle [radius=0.5];
+	\draw [thick] (-0.353553391,0.353553391)--(-1.5,1.45);
+	\draw [gluon, thick] (0.353553391,0.353553391)--(1.5,1.45);
+	\draw [gluon, thick, color=blue] (0,0.5)--(0,1.85);
+	\node at (-1.77,1.8) {#1};
+	\node at (0,2.1) {\textcolor{blue}{#2}};
+	\node at (1.77,1.8) {#3};
+	\end{tikzpicture}}
+\newcommand{\gpsoft}[3]{\begin{tikzpicture} [scale=0.5]
+	\draw [thick, fill=lightgray] (0,0) circle [radius=0.5];
+	\draw [gluon, thick] (-0.353553391,0.353553391)--(-1.5,1.45);
+	\draw [thick] (0.353553391,0.353553391)--(1.5,1.45);
+	\draw [gluon, thick, color=blue] (0,0.5)--(0,1.85);
+	\node at (-1.77,1.8) {#1};
+	\node at (0,2.1) {\textcolor{blue}{#2}};
+	\node at (1.77,1.8) {#3};
+	\end{tikzpicture}}
+\newcommand{\gpsoftblue}[3]{\begin{tikzpicture} [scale=0.5]
+	\draw [thick, fill=lightgray] (0,0) circle [radius=0.5];
+	\draw [gluon, thick, color=blue] (-0.353553391,0.353553391)--(-1.5,1.45);
+	\draw [thick] (0.353553391,0.353553391)--(1.5,1.45);
+	\draw [gluon, thick, color=blue] (0,0.5)--(0,1.85);
+	\node at (-1.77,1.8) {\textcolor{blue}{#1}};
+	\node at (0,2.1) {\textcolor{blue}{#2}};
+	\node at (1.77,1.8) {#3};
+	\end{tikzpicture}}
+\newcommand{\ppsoft}[3]{\begin{tikzpicture} [scale=0.5]
+	\draw [thick, fill=lightgray] (0,0) circle [radius=0.5];
+	\draw [thick] (-0.353553391,0.353553391)--(-1.5,1.45);
+	\draw [thick] (0.353553391,0.353553391)--(1.5,1.45);
+	\draw [gluon, thick, color=blue] (0,0.5)--(0,1.85);
+	\node at (-1.77,1.8) {#1};
+	\node at (0,2.1) {\textcolor{blue}{#2}};
+	\node at (1.77,1.8) {#3};
+	\end{tikzpicture}}
+
+%TikZ diagrams
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{arrows,shapes}
+\usetikzlibrary{trees}
+\usetikzlibrary{matrix,arrows} 				
+\usetikzlibrary{positioning}				
+\usetikzlibrary{calc,through}			
+\usetikzlibrary{decorations.pathreplacing} 
+\usepackage{pgffor}				
+
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\tikzset{
+	vector/.style={decorate, decoration={snake,amplitude=3pt}, draw},
+	gluon/.style={decorate, decoration={coil,amplitude=2.5pt},draw}, 
+	provector/.style={decorate, decoration={snake,amplitude=2.5pt}, draw},
+	antivector/.style={decorate, decoration={snake,amplitude=-2.5pt}, draw},
+	fermion/.style={draw=black, postaction={decorate},
+		decoration={markings,mark=at position .55 with {\arrow[draw=black,thick]{>}}}},
+	fermionbar/.style={draw=black, postaction={decorate},
+		decoration={markings,mark=at position .55 with {\arrow[draw=black,thick]{<}}}},
+	fermionnoarrow/.style={draw=black},
+	gluon/.style={decorate, draw=black,
+		decoration={coil,amplitude=3.3pt, segment length=3.5pt}},
+	scalar/.style={dashed,draw=black, postaction={decorate},
+		decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+	scalarbar/.style={dashed,draw=black, postaction={decorate},
+		decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+	scalarnoarrow/.style={dashed,draw=black},
+	electron/.style={draw=black, postaction={decorate},
+		decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+	bigvector/.style={decorate, decoration={snake,amplitude=4pt}, draw},
+}
+
+\tikzstyle{block} = [draw, rectangle, minimum height=3em, minimum width=6em]
+%************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

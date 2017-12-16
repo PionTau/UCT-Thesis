@@ -1,0 +1,41 @@
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{iii}{Doc-Start}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Declaration}{iv}{chapter*.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{v}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}MHV Approach}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}Spinor helicity formalism}{2}{section.2.1}
+\contentsline {section}{\numberline {2.2}Color kinematic duality}{2}{section.2.2}
+\contentsline {section}{\numberline {2.3}Little group scaling}{2}{section.2.3}
+\contentsline {section}{\numberline {2.4}On-shell recursion relation}{2}{section.2.4}
+\contentsline {chapter}{\numberline {3}Review of the $qg \DOTSB \relbar \joinrel \rightarrow qg$ calculation}{3}{chapter.3}
+\contentsline {section}{\numberline {3.1}Decomposition of the amplitude using BCFW formalism}{3}{section.3.1}
+\contentsline {section}{\numberline {3.2}Computation of the $3$-point amplitude using the little group scaling}{3}{section.3.2}
+\contentsline {section}{\numberline {3.3}Total differential cross section}{3}{section.3.3}
+\contentsline {section}{\numberline {3.4}Generalizing the MHV amplitudes}{3}{section.3.4}
+\contentsline {chapter}{\numberline {4}Radiative emission}{4}{chapter.4}
+\contentsline {section}{\numberline {4.1}Review of the photon bremsstrhalung in QED}{4}{section.4.1}
+\contentsline {section}{\numberline {4.2}Soft-collinear gluon radiation off massless quark}{7}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}One radiative gluon emission}{7}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Two radiative gluon emission}{11}{subsection.4.2.2}
+\contentsline {subsubsection}{MHV amplitudes}{12}{section*.6}
+\contentsline {subsubsection}{NMHV amplitudes}{16}{section*.7}
+\contentsline {subsection}{\numberline {4.2.3}Three radiative gluon emission}{18}{subsection.4.2.3}
+\contentsline {subsubsection}{MHV amplitudes}{19}{section*.8}
+\contentsline {subsubsection}{N$^2$MHV amplitudes}{22}{section*.9}
+\contentsline {chapter}{\numberline {5}Bremsstrahlung gluon emission beyond eikonal trajectory approximation}{26}{chapter.5}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{27}{chapter*.10}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Appendix}{28}{chapter*.10}
+\contentsline {chapter}{\numberline {A}Conventions for $4$D Spinor Helicity Formalism}{28}{appendix.A}
+\contentsline {chapter}{\numberline {B}Spinor Identities}{29}{appendix.B}
+\contentsline {chapter}{\numberline {C}$SU(N)$ Color Algebra}{30}{appendix.C}
+\contentsline {section}{\numberline {C.1}Decomposition of product of $T^a$}{30}{section.C.1}
+\contentsline {chapter}{\numberline {D}MHV Amplitude Caclulations}{31}{appendix.D}
+\contentsline {section}{\numberline {D.1}One gluon emission}{31}{section.D.1}
+\contentsline {subsubsection}{MHV amplitudes}{31}{section*.11}
+\contentsline {subsubsection}{BCFW Calculations}{31}{section*.12}
+\contentsline {section}{\numberline {D.2}two gluon emission}{31}{section.D.2}
+\contentsline {subsubsection}{MHV amplitudes}{31}{section*.13}
+\contentsline {subsubsection}{BCFW Calculations}{31}{section*.14}
+\contentsline {section}{\numberline {D.3}three gluon emission}{31}{section.D.3}
+\contentsline {subsubsection}{MHV amplitudes}{31}{section*.15}
+\contentsline {subsubsection}{BCFW Calculations}{31}{section*.16}

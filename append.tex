@@ -1,0 +1,256 @@
+\appendix
+\setcounter{chapter}{0}
+\renewcommand{\chaptername}{Appendix}
+%\renewcommand{\thechapter}{\arabic{section}.\arabic{ind}}
+\renewcommand{\theequation}{\Alph{chapter}.\arabic{section}.\arabic{equation}}
+\addcontentsline{toc}{chapter}{\numberline{}Appendix}
+\setcounter{equation}{0}
+
+
+\chapter{Conventions for $4$D Spinor Helicity Formalism}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Spinor Identities}
+
+\underline{\textit{Schouten identity}}: $\braket{ij}\braket{kl}+\braket{ki}\braket{jl}+\braket{kj}\braket{li}=0$
+
+\noindent We know that three vectors in $2$-dimensional vector space cannot be linearly independent. Therefore, if we have three two-component vectors $\vert i\rangle ,\vert j\rangle$ and $\vert k\rangle$, we can write one of them (say $\vert k\rangle$) as a linear combination if the two others
+\begin{equation}
+\vert k\rangle =a\vert i\rangle + b\vert j\rangle, \quad (\text{for some } a \text{ and } b) .
+\label{Appschouten}
+\end{equation}
+To find the value of $a$ and $b$, one can multiply the above expression either by $\langle i\vert$ or $\langle j\vert$. Thus, we find
+\begin{equation}
+a=\frac{\braket{jk}}{\braket{ji}} \quad \text{and} \quad b=\frac{\braket{ik}}{\braket{ij}}.
+\end{equation}
+Using these results in the expression \ref{Appschouten}, we have the following result
+\begin{equation}
+\vert k\rangle -\frac{\braket{jk}}{\braket{ji}} \vert i\rangle - \frac{\braket{ik}}{\braket{ij}} \vert j \rangle =0 \Longleftrightarrow \braket{ij}\vert k\rangle -\braket{jk} \vert i\rangle -\braket{ik}\vert j\rangle=0.
+\end{equation}
+The Schouten identity is often written with a fourth vector $\langle l\vert$,
+\begin{equation}
+\braket{ij}\braket{lk}+\braket{jk}\braket{il}+\braket{ik}\braket{jl}=0.
+\label{schoutenangle}
+\end{equation}
+With the same arguments and computations, the Schouten identity also applies for square brackets
+\begin{equation}
+[ij] [lk]+[jk] [il]+[ik] [jl]=0.
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{$SU(N)$ Color Algebra}
+
+\section{Decomposition of product of $T^a$}
+\label{decompTa}
+The non-Abelian nature of the $SU(N)$ group makes the calculation of scattering amplitudes complicated. However, as a way of simplifying computations, one can written the product of the generator matrices $T^a$ as a function of commutator. For instance,
+\begin{align}
+T^{a_1}T^{a_k}T^{a_l} &=T^{a_k}T^{a_l}T^{a_1}+[T^{a_1},T^{a_k}T^{a_l}], \\
+T^{a_k}T^{a_1}T^{a_l} &=T^{a_k}T^{a_l}T^{a_1}+T^{a_k}[T^{a_1},T^{a_l}],
+\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{MHV Amplitude Caclulations}
+
+
+\section{One gluon emission}
+
+\subsubsection{MHV amplitudes}
+\label{MHVcalc}
+
+\subsubsection{BCFW Calculations}
+\label{BCFW1}
+
+
+\section{two gluon emission}
+
+\subsubsection{MHV amplitudes}
+\label{MHVcalc2}
+
+\subsubsection{BCFW Calculations}
+\label{BCFW12}
+
+
+\section{three gluon emission}
+
+\subsubsection{MHV amplitudes}
+\label{MHVcalc3}
+
+\subsubsection{BCFW Calculations}
+\label{BCFW13}
+
+$\clubsuit$ Notice that both the two subdiagrams of $\mathcal{D}^{(1)}$ are $\overline{\text{MHV}}$ and written in a mathematical form, we get
+\begin{equation}
+\mathcal{D}^{(1)}=\frac{[q\hat{P}_{23}]^3[p\hat{P}_{23}]}{[pk] [kl] [l\hat{1}] [\hat{1} \hat{P}_{23}] [\hat{P}_{23} q]} \frac{1}{\braket{12}[12]} \frac{[\hat{2}3]^4}{[\hat{P}_{23} \hat{2}] [\hat{2}3] [3\hat{P}_{23}]}. 
+\end{equation}
+
+However, we would like to have an expression which does not depend on the shifted momenta. The \textbf{\emph{on-shell condition}} tells us that $\widehat{P}_{23}^2=0$. This implies that
+\begin{equation}
+(\hat{p}_2+p_3)^2= \braket{\hat{2}3} [\hat{2}3]=0.
+\end{equation}
+Since, $[\hat{2}3]=[23]$ and is non-zero, $\braket{\hat{2}3}$ must vanish. Thus,
+\begin{equation}
+\braket{\hat{2}3}=\braket{23}-z\braket{13}=0 \Longrightarrow z=\frac{\braket{23}}{\braket{13}}.
+\end{equation}
+The shift-equations can now be written as
+\begin{equation}
+\vert \hat{1} ] =\vert 1] + \frac{\braket{23}}{\braket{13}} \vert 2], \qquad \text{and} \qquad \vert \hat{2} \rangle = \vert 2 \rangle - \frac{\braket{23}}{\braket{13}} \vert 1\rangle .
+\end{equation}
+Furthermore, $\braket{\hat{2}3}=0$ suggests that the vectors $\vert \hat{2} \rangle$ and $\vert 3\rangle$ are \textbf{\emph{collinear}} and we have the relation $\vert \hat{2} \rangle = x \vert 3\rangle$ which leads to the expression,
+\begin{equation}
+\vert 2\rangle -\frac{\braket{23}}{\braket{13}} \vert 1 \rangle=x \vert 3\rangle .
+\end{equation}
+Again we can multiply each side of this equation by any vector we want. However, if we multiply each side of the equation by the vector $\langle 1\vert$ we cancel one term. Therefore, we have
+\begin{equation}
+\braket{12}=x \braket{13} \Longrightarrow x=\frac{\braket{12}}{\braket{13}}.
+\end{equation}
+
+By virtue of the \textbf{\emph{on-shell condition}} and the \textbf{\emph{collinearity}} of the shifted momenta, we can now get rid of the shifted momenta in the expression of the internal momentum $\widehat{P}_{23}$. Indeed, in terms of the square and angle brackets $\widehat{P}_{23}$ can be written as $\widehat{P}_{23}=\vert \hat{2} \rangle [\hat{2} \vert +\vert 3 \rangle [3\vert$ and by developing this expression, we get
+\begin{equation}
+\widehat{P}_{23}=\vert 3 \rangle \left( \frac{\braket{12}}{13} [2\vert +[3\vert \right).
+\end{equation}
+Thus we have,
+\begin{equation}
+\vert \widehat{P}_{23} \rangle =\vert 3 \rangle \qquad \text{and} \qquad \vert \widehat{P}_{23}]=\frac{\braket{12}}{13} [2\vert +[3\vert .
+\end{equation}
+
+Now, let us compute the terms which contain the shifted momenta in $\mathcal{D}^{(1)}$. First of all, we have
+\begin{align}
+[q\widehat{P}_{23}] &= [q\vert \left(\frac{\braket{13}}{\braket{13}} \vert 2]+\vert 3]\right), \nonumber \\ 
+&= \frac{\braket{12}}{\braket{13}} [q2]+[q3],  \nonumber \\
+&= \frac{\braket{12}[q2]+\braket{13}[q3]}{\braket{35}}. 
+\end{align}
+The numerator can be rewritten as $(-\braket{12}[2q]-\braket{13}[3q])$ which is also equal to $(-\langle 1\vert 2\vert q]-\langle 1\vert 3 \vert q] )$. Thus,
+\begin{equation}
+[q\widehat{P}_{23}]=-\frac{\langle 1 \vert 2+3 \vert q]}{\braket{13}}.
+\end{equation}
+By symmetry, we can get the expression of $[p\widehat{P}_{23}]$ without doing any computation,
+\begin{eqnarray}
+[p\widehat{P}_{23}]=-\frac{\langle 1 \vert 2+3 \vert p]}{\braket{13}}.
+\end{eqnarray}
+By doing the same computation as for $[q\widehat{P}_{23}]$, we can straightforwardly derive the following expressions:
+\begin{equation}
+[l\hat{1}]=\frac{\langle 3\vert 1+2\vert l]}{\braket{13}}, \qquad [\widehat{P}_{23} \hat{2}]=[32] \qquad \text{and} \qquad [3\widehat{P}_{23}]=\frac{\braket{12}}{\braket{13}}[32].
+\end{equation}
+The remaining form that we have to compute is 
+\begin{align}
+[\hat{1} \widehat{P}_{23}] &=\left([1\vert +\frac{\braket{23}}{\braket{13}}[2\vert\right) \left(\frac{\braket{12}}{\braket{13}} \vert 2 ] + \vert 3]\right), \label{kl1} \\
+&= \frac{\braket{12}[12]+\braket{13}[13]+\braket{23}[23]}{\braket{13}}. \label{124}
+\end{align}
+From the first to the second line, we just expanded the equation (\ref{kl1}) by taking into account that $[22]=0$. In a more compact form, the equation (\ref{124}) becomes
+\begin{equation}
+[\hat{1} \widehat{P}_{23}]=\frac{s_{123}}{\braket{13}}, \quad \text{where} \quad s_{123}= \braket{12}[12]+\braket{13}[13]+\braket{13}[13].
+\end{equation}
+Finally, after combining all these result, rearranging some terms and performing some simplification we get the final mathematical expression of the diagram represented by $\mathcal{C}$, given by
+\begin{equation}
+\mathcal{D}^{(1)}=\frac{1}{s_{123}} \frac{\langle 1\vert 2+3\vert q]^2 \langle 1\vert 2+3\vert p]}{\braket{12} \braket{23} [pk] [kl] \langle 3\vert 1+2\vert l]}. 
+\end{equation}
+
+$\clubsuit$ The left subdiagram of $\mathcal{D}^{(2)}$ is a MHV-diagram while the right subdiagram is a NMHV-diagram. The NMHV part (called $\mathcal{M}$) is given by
+\begin{equation}
+\mathcal{M}=\frac{1}{\hat{s}_{12P}} \frac{\langle \hat{P}_{l1}\vert \hat{2}+3\vert q]^2\langle \hat{P}_{l1}\vert \hat{2}+3\vert p]}{\braket{\hat{P}_{l1} \hat{2}} \braket{\hat{2} 3} [qp][pk] \langle 3\vert \hat{P}_{l1}+\hat{2}\vert k]}+\frac{1}{\hat{s}_{k2P}} \frac{[\hat{2}\vert k+\hat{P}_{l1}\vert p\rangle^2 [\hat{2}\vert k+\hat{P}_{l1}\vert q\rangle}{[k\hat{P}_{l1}] [\hat{P}_{l1} \hat{2}] \braket{pq} \braket{q3} [k\vert \hat{P}_{l1}+\hat{2}\vert 3\rangle}.
+\end{equation}
+Similarly to the previous calculations, we first need to get rid of the shifted momentum. The \textbf{\emph{on-shell condition}}, $\widehat{P}_{l1}=(l+\hat{p}_1)=\braket{l1}[l\hat{1}]=0$, implies that $[l\hat{1}]=0$ which also shows the \textbf{\emph{collinearity}} of $\vert l]$ and $\vert \hat{1}]$. On the one hand, we have
+\begin{equation}
+[l\hat{1}]=[l1]+z[l2]=0 \Longrightarrow z=-\frac{[l1]}{[l2]} .
+\end{equation}
+As a consequence, the shift-equation now becomes
+\begin{equation}
+\vert \hat{1}] =\vert 1]-\frac{[l1]}{[l2]} \, \vert 2] \qquad \text{and} \qquad \vert \hat{2} \rangle = \vert 2 \rangle +\frac{[l1]}{[l2]} \, \vert 1\rangle .
+\end{equation}
+On the other hand, the \textbf{\emph{collinearity}}, $\vert \hat{1}]=x \vert l]$, induces that
+\begin{equation}
+\vert 1]-\frac{[l1]}{[l2]} \, \vert 2]=x\vert l],
+\end{equation} 
+and by multiplying each side of this equation by $[2\vert$, we get
+\begin{equation}
+[21]=x[2l] \Longrightarrow x=\frac{12}{l2}.
+\end{equation}
+Therefore, the internal momentum $\widehat{P}_{l1}$ which can be written as $\widehat{P}_{l1}=\vert l \rangle [l\vert +\vert \hat{1}\rangle [\hat{1} \vert$ is now being expressed as 
+\begin{equation}
+\widehat{P}_{l1}=\left(\vert l\rangle +\frac{[12]}{[l2]} \, \vert 1\rangle \right) [l\vert ,
+\end{equation}
+where
+\begin{equation}
+\vert \widehat{P}_{l1} \rangle =\vert l\rangle +\frac{[12]}{[l2]} \, \vert 1\rangle \qquad \text{and} \qquad [\widehat{P}_{l1} \vert =[l\vert .
+\end{equation}
+Let us first get rid of the terms which contains an expression of the shifted momentum in the Equation (\ref{D}). Using the shift-equation, we can show that
+\begin{equation}
+\braket{\hat{1} \widehat{P}_{l1}}=\braket{1\widehat{P}_{l1}}=\braket{1l} \qquad \text{and} \qquad \braket{\widehat{P}_{l1} l}=\frac{[12]}{[l2]} \braket{1l},
+\end{equation}
+and therefore, $\mathcal{D}^{(2)}$ is given by
+\begin{equation}
+\mathcal{D}^{(2)}=\mathtt{S}^1_{l2} \times \mathcal{M}, \quad \text{where} \quad \mathtt{S}^1_{l2}=\frac{[l2]}{[l1] [l2]}.
+\end{equation}
+The task is now to compute the NMHV partial amplitude $\mathcal{M}$. By virtue of the computation that we have done while computing the partial amplitude $\mathcal{D}^{(1)}$, it is straightforward to show that 
+\begin{equation}
+\braket{\widehat{P}_{l1} \hat{2}}=\frac{s_{l12}}{[l2]}, \quad \braket{\hat{2}3}=\frac{\langle 3 \vert 1+2\vert l]}{[l2]} \quad \text{and} \quad [\widehat{P}_{l1} \hat{2}]=[l2].
+\end{equation}
+Now, let us compute the trace terms $\langle \widehat{P}_{l1} \vert 2+3\vert q], \langle 3\vert \widehat{P}_{l1} +\hat{2} \vert k], [\hat{2} \vert k+\widehat{P}_{l1} \vert p\rangle$, \mbox{$[\hat{2} \vert k+\widehat{P}_{12} \vert q\rangle$} and $[k\vert \widehat{P}_{l1}+\hat{2}\vert 3\rangle$.
+\begin{itemize}
+	\item we have
+	\begin{align}
+	\langle \widehat{P}_{l1} \vert 2+3\vert q] =\braket{\widehat{P}_{l1} \hat{2}}[2q]+\braket{\widehat{P}_{l1}3}[3q],
+	\end{align}
+	with
+	\begin{equation}
+	\braket{\widehat{P}_{l1}3}=-\frac{\langle 3\vert l+1\vert 2]}{[l2]}.
+	\end{equation}
+	Thus,
+	\begin{equation}
+	\langle \widehat{P}_{l1} \vert 2+3\vert q]=\frac{s_{l12}}{[l2]}[2q]-\frac{\langle 3\vert l+1\vert 2]}{[l2]}[3q].
+	\end{equation}
+	\item Similarly,
+	\begin{equation}
+	\langle 3\vert \widehat{P}_{l1} +\hat{2} \vert k]=\braket{3\widehat{P}_{l1}} [lk]+\braket{3\hat{2}}[2k],
+	\end{equation}
+	where we have,
+	\begin{equation}
+	\braket{3\hat{2}}=-\frac{\langle 3\vert l+2\vert l]}{[l2]} \qquad \text{and} \qquad \braket{3\widehat{P}_{l1}}=-\braket{\widehat{P}_{l1}3}.
+	\end{equation}
+	Therefore, we have 
+	\begin{equation}
+	\langle 3\vert \widehat{P}_{l1} +\hat{2} \vert k]=\frac{\langle 3\vert l+1\vert 2]}{[l2]} [lk]-\frac{\langle 3\vert l+2\vert l]}{[l2]}[2k] .
+	\end{equation}
+	\item Now, it can be easily seen that the last trace term has a form
+	\begin{align}
+	[\hat{2} \vert k+\widehat{P}_{l1} \vert p\rangle &=[2k] \braket{kp}+[2\widehat{P}_{l1}] \braket{\widehat{P}_{l1}p}, \nonumber \\
+	&=[2k] \braket{kp}+[2l] \left( \braket{lp}+\frac{[12]}{[l2]}\braket{1p} \right), \nonumber \\
+	&=[2\vert k\vert p\rangle +[2\vert l\vert p\rangle +[2\vert 1\vert p\rangle ,
+	\end{align}
+	which gives as a result
+	\begin{equation}
+	[\hat{2} \vert k+\widehat{P}_{l1} \vert p\rangle = [2\vert k+l+1\vert p\rangle .
+	\end{equation}
+	And we know that $[\hat{2} \vert k+\widehat{P}_{12} \vert p\rangle$ and $[\hat{2} \vert k+\widehat{P}_{12} \vert q\rangle$ are related by symmetry, thus
+	\begin{equation}
+	[\hat{2} \vert k+\widehat{P}_{l1} \vert q\rangle = [2\vert k+l+1\vert q\rangle .
+	\end{equation}
+\end{itemize}
+Finally, we are now left with the computation of the terms $\hat{s}_{23P}$ and $\hat{s}_{k2P}$. Recall that generally, $\hat{s}_{23P}$ is defined as 
+\begin{equation}
+\hat{s}_{23P}=\braket{\hat{2}3} [\hat{2}3]+\braket{3\widehat{P}_{l1}} [3\widehat{P}_{l1}]+\braket{\hat{2}\widehat{P}_{l1}} [\hat{2} \widehat{P}_{l1}]
+\end{equation}
+which after calculation gives
+\begin{equation}
+\hat{s}_{23P}=s_{l12}+ \frac{\langle 3\vert 1+2\vert l]}{[l2]} [23] +\frac{\langle 3\vert l+1\vert 2]}{[l2]} [2l].
+\end{equation}
+By doing a similar calculation, we get as a result
+\begin{equation}
+\hat{s}_{14P} = s_{l12}+ \frac{\langle k\vert 1+2\vert l]}{[l2]} [2k] +\frac{\langle k\vert l+1\vert 2]}{[l2]} [kl].
+\end{equation}
+
+At this point, we have managed to cancel all the shifted momenta in the expression of $\mathcal{M}$. Combining all the result that we have derived previously, making some simplification and rearranging some terms we end up with the following expression
+\begin{align}
+\mathcal{M} =& \frac{1}{s_{l12}} \frac{[l2] \big( s_{l12} [2q] - \langle 3\vert l+1\vert 2][3q] \big)^2}{\big( s_{l12} [l2]+ \langle 3\vert 1+2\vert l][23]+ \langle 3\vert l+1\vert 2][2l] \big) [l\vert 1+2\vert 3\rangle} \times \nonumber \\
+& \frac{s_{l12} [2p] - \langle 3\vert l+1\vert 2] [3p]}{[qp] [pk] \big( \langle 3\vert l+1\vert 2][lk]+ \langle 3\vert 1+2\vert l][k2] \big)}  + \frac{[l2]}{[kl] \braket{pq} \braket{q3}} \times \nonumber \\
+& \frac{\big( [2\vert k+l+1\vert p\rangle \big)^2 [2\vert k+l+1\vert q\rangle}{\big( s_{l12} [l2]+ \langle k\vert 1+2\vert l][2k]+ \langle k\vert l+1\vert 2][kl] \big) \big( \langle 3\vert l+1\vert 2][lk]+ \langle 3\vert 1+2\vert l][k2] \big)}
+\end{align} 
+Therefore, the final expression of the diagramm represented by $\mathcal{D}^{(2)}$ is given by
+\begin{align}
+\mathcal{D}^{(2)} =& \mathtt{S}^1_{l2} \times \left( \frac{[l2]}{\langle 3\vert l+1\vert 2][lk]+ \langle 3\vert 1+2\vert l][k2]} \right) \bigg\lbrace \frac{s_{l12} [2p] - \langle 3\vert l+1\vert 2] [3p]}{s_{l12} [qp] [pk]  [l\vert 1+2\vert 3\rangle} \times \nonumber \\
+& \frac{[l2] \big( s_{l12} - \langle 3\vert l+1\vert 2][3q] \big)^2}{ s_{l12} [l2]+ \langle 3\vert 1+2\vert l][23]+ \langle 3\vert l+1\vert 2][2l]}+ \frac{1}{[kl] \braket{pq} \braket{q3}} \times \nonumber \\
+& \frac{\big( [2\vert k+l+1\vert p\rangle \big)^2 [2\vert k+l+1\vert q\rangle}{s_{l12} [l2]+ \langle k\vert 1+2\vert l][2k]+ \langle k\vert l+1\vert 2][kl]} \bigg\rbrace ,
+\end{align}

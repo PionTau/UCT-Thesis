@@ -1,0 +1,690 @@
+\chapter{Radiative emission}
+
+\section{Review of the photon bremsstrhalung in QED}
+\label{softQED}
+
+The study of the photon Bremsstrhalung in QED is an important way forward towards the study of the radiative energy loss in QGP. Understanding the momentum distribution of the multiple radiative photon emission can give us some clue to understand how the non-Abelian nature of the QCD affects the distribution of the radiative gluon emission. Consider the process where a high energetic quark is kicked by photon and then emits radiations (see Figure \ref{multiplephoton}). The approach using the MHV technique to solve this problem has been introduced by Rasoanaivo and Horowitz. Our main interest here is to show that each emission of Bremsstrahlung photon is independent. 
+
+\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture}[scale=0.85]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [thick] (-0.5,0)--(-2.25,0);
+	\draw [thick] (0.5,0.15)--(2.5,0.45);
+	\draw [vector, thick] (-0.353553391,-0.353553391)--(-1.5,-1.35);
+	\draw [vector, thick, color=blue] (0.42,0.253553391)--(2.25,1.75);
+	\draw [vector, thick, color=blue] (-0.25,0.4)--(-1.25,2.1);
+	\draw [dashed, thick, color=blue] (33:1.75) arc (20:128:1.5);
+	\node at (-2.5,0) {$p$};
+	\node at (2.65,0.47) {$q$};
+	\node at (-1.75,-1.35) {$k$};
+	\node at (2.45,1.78) {\textcolor{blue}{$s_1$}};
+	\node at (-1.27,2.3) {\textcolor{blue}{$s_n$}};
+	\end{tikzpicture}
+	\caption{Diagrammatic representation of the multiple photon Bremsstrahlung in QED in the process $q \gamma \rightarrow q+ng$ where $n$ represent the number of photon Bremsstrahlung. The soft photons have momentum $s_i$ ($i$ runs from $1$ to $n$).}
+	\label{multiplephoton}
+\end{figure}
+
+Let us consider the case where we have an $\overline{\text{MHV}}$ amplitudes. Choose the incoming quark and the tickling photon to have positive helicity and all the remaining particles to have negative helicity. Going from the general formula for the $\overline{\text{MHV}}$ amplitudes, we change generator matrices $T^{a}$ to $1$ and coupling constant to $Q\tilde{e}$. Thus, the amplitude for our process is given by
+\begin{equation}
+\mathcal{A}_{n+3}(\{p_i,\gamma_i\})=\frac{[pk]^3[qk]}{[qp]} \sum_{\mathcal{P}_{n+1}(1,\cdots , n)} \frac{1}{[pk] [k1] [12] \cdots [nq]},
+\end{equation}
+where the sum is performed over the permutation of the photons. We can factorize out the photon with momentum $k$ from the soft photons. in that case, we reduce the sum over permutation $\mathcal{P}_{n+1}$ into a sum over the permutation $\mathcal{P}_{n}$. So, we have
+\begin{equation}
+\mathcal{A}_{n+3}=\frac{[pk]^3[qk]}{[qp]} \sum_{\mathcal{P}_{n}(1,\cdots , n)} \frac{1}{[p1] [12] \cdots [nq]} \left( \qsoft{p}{1}{k}+\qsoft{1}{2}{k}+ \cdots \qsoft{n}{q}{k} \right) ,
+\end{equation}
+Applying the Schouten identity, the terms inside the parentheses simplifies into one term which is independent of the momentum of the soft photons, 
+\begin{equation}
+\mathcal{A}_{n+3}=\frac{[pk]^3[qk]}{[qp]} \frac{[pq]}{[pk] [kq]} \sum_{\mathcal{P}_{n}(1,\cdots , n)} \frac{1}{[p1] [12] \cdots [nq]}.
+\label{softphoton1}
+\end{equation}
+We can rearrange this expression to separate completely the soft from the hard scattering. Thus, we get
+\begin{align}
+\mathcal{A}_{n+3}(\{p_i,\gamma_i\})=\left( \frac{[pk]^3[qk]}{[pk] [kq] [qp]} \right) \times \left( \sum_{\mathcal{P}_{n}(1,\cdots , n)} \frac{[pq]}{[p1] [12] \cdots [nq]} \right)
+\end{align}
+Therefore, the current for the photon Bremsstrahlung is given by 
+\begin{equation}
+J_{\text{QED}} (1, \cdots ,n)=\sum_{\mathcal{P}_{n}(1,\cdots , n)} \frac{[pq]}{[p1] [12] \cdots [nq]}.
+\end{equation}
+Let us now show that the emission of radiative photons are independent, which is equivalent to showing the following relation 
+\begin{equation}
+J_{\text{QED}} (1, \cdots ,n)=\sum_{\mathcal{P}_{n}(1,\cdots , n)} \frac{[pq]}{[p1] [12] \cdots [nq]}= \prod_{I=\{1, \cdots , n\}} \frac{[pq]}{[pI] [Iq]}.
+\label{identity}
+\end{equation}
+As a direct consequence of the Schouten identity, this relation is certainly true for $n=2$. Let us check if this relation still hold for $n=3$. We have,
+\begin{align}
+\sum_{\mathcal{P}_{3}(1,2,3)} \frac{[pq]}{[p1] [12] [23] [3q]} &= \sum_{\mathcal{P}_{2}(1,2)} \frac{[pq]}{[p1] [12] [2q]} \left( \qsoft{p}{1}{3}+\qsoft{1}{2}{3}+\qsoft{p}{1}{3}+\qsoft{2}{q}{3} \right) \nonumber \\
+&= \qsoft{p}{q}{3} \sum_{\mathcal{P}_{2}(1,2)} \frac{[pq]}{[p1] [12] [2q]} \\
+&=\prod_{I=\{1,2,3\}} \frac{[pq]}{[pI] [Iq]}
+\end{align}
+We used the Schouten identity to go from the first to the second line. From the second to the third line, we just the fact the identity (\ref{identity}) is true for $n=2$. Let us approach the problem by induction assuming that the identity is true for any $n$ and show that it is still true for $n+1$ number of Bremsstrahlung photons. For $n+1$ number of photons, we can always write 
+\begin{align}
+\sum_{\mathcal{P}_{n+1}(1,\cdots , n+1)} \frac{[pq]}{[p1] [12] \cdots [(n+1)q]}= & \sum_{\mathcal{P}_{n}(1,\cdots , n)} \frac{[pq]}{[p1] [12] \cdots [nq]} \bigg( \qsoft{p}{q}{(n+1)} \nonumber \\ 
+& +\cdots + \qsoft{n}{q}{(n+1)} \bigg).
+\end{align}
+Again, one can see here that the term inside the parentheses simplifies to one term and depends only on the momentum of the quarks and the $(n+1)$th radiative photons. On the other hand, the summation over the permutation of photons becomes a product of the independent emission
+\begin{equation}
+\sum_{\mathcal{P}_{n+1}(1,\cdots , n+1)} \frac{[pq]}{[p1] [12] \cdots [(n+1)q]}=\prod_{I=\{1, \cdots , n+1\}} \frac{[pq]}{[pI] [Iq]}.
+\end{equation}
+This result shows that the identity in (\ref{identity}) is indeed true and each emission of photon is independent. As a result, the distribution of Bremsstrahlung photons follows the Poisson distribution. 
+
+Replacing the Bremsstrahlung photons to Bremsstrahlung gluons, it is straightforward to show that the emission current is given by the Expression (\ref{gluonbrem}). The difference is that gluons  can carry color charges and two Bremsstrhalung gluons can be emitted from one gluon decay. Mathematically speaking, the difficulty in the calculation lies in the fact the generator matrices $T^a$ do not commute. Therefore, one can naively expect that the momentum distribution of Bremsstrahlung gluon emission does not follow the Poisson distribution. In fact, one would expect that the emission current for multiple gluon emission is given by $(J_{\text{QED}} +J_{\text{QCD}})$, where second term from the non-Abelian nature proper to QCD.  
+\begin{equation}
+\begin{aligned}
+\begin{tikzpicture}[scale=0.8]
+\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+\draw [thick] (-0.5,0)--(-2.25,0);
+\draw [thick] (0.5,0.15)--(2.5,0.45);
+\draw [vector, thick] (-0.353553391,-0.353553391)--(-1.5,-1.35);
+\draw [gluon, thick, color=blue] (0.42,0.253553391)--(2.25,1.75);
+\draw [gluon, thick, color=blue] (-0.25,0.4)--(-1.25,2.1);
+\draw [dashed, thick, color=blue] (33:1.75) arc (20:128:1.5);
+\node at (-2.5,0) {$p$};
+\node at (2.65,0.47) {$q$};
+\node at (-1.75,-1.35) {$k$};
+\node at (2.45,1.78) {\textcolor{blue}{$s_1$}};
+\node at (-1.27,2.3) {\textcolor{blue}{$s_n$}};
+\end{tikzpicture}
+\end{aligned}=g^2_s \sum_{\mathcal{P}_{n}(1,\cdots , n)} T^{a_1} \cdots T^{a_n} \frac{[pq]}{[p1] [12] \cdots [nq]}.
+\label{gluonbrem}
+\end{equation}
+
+
+\section{Soft-collinear gluon radiation off massless quark}
+
+In this section, we compute the $qg\longrightarrow qg$ process with emission of one soft and collinear gluon with respect to the outgoing quark. At the tree level for soft-collinear emission (as well as for photon), we expect the leading term in the momentum expansion of a radiative amplitude to be controlled by the \emph{soft-collinear factor}. This section both reviews and improves the work done in \cite{Tanjona} for the computation of the one and two emission of bremsstrhalung gluon. We aim to compute the amplitude $\vert \mathcal{A}(qg\longrightarrow qg+ng)\vert^2$, where $n=1,2,3$ represents the number of the radiative gluons, in the soft-collinear regime by relaxing the approximation that the outgoing parton is perpendicular to the primordial parton direction. Indeed, in the radiative energy loss formalism in the QGP, the direction of the outgoing parton does not change much after it scatters with a particle from the medium. 
+
+\subsection{One radiative gluon emission}
+
+Let us now start by computing the case for the single gluon emission. Let us label the momentum of the soft gluon to be $s_1$, the remaining momentum are labeled in the same way as in Chapter \ref{review} (see Figure \ref{1gluon}). 
+
+\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture}[scale=0.89]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [thick] (-0.5,0)--(-2.25,0);
+	\draw [thick] (0.5,0.15)--(2.5,0.45);
+	\draw [gluon, thick] (0.5,-0.15)--(2.5,-0.45);
+	\draw [gluon, thick] (-0.353553391,-0.353553391)--(-1.5,-1.35);
+	\draw [gluon, thick, color=blue] (0.42,0.253553391)--(2.25,1.75);
+	\node at (-2.5,0) {$p$};
+	\node at (2.65,0.47) {$q$};
+	\node at (2.75,-0.45) {$l$};
+	\node at (-1.75,-1.35) {$k$};
+	\node at (2.45,1.78) {\textcolor{blue}{$s_1$}};
+	\end{tikzpicture}
+	\caption{MHV diagrammatic representation of the single gluon emission in the $qgg\bar{q}$-process. The soft radiative gluon $s_1$ ($s_1 \sim 0$) is assumed to be collinear to the high energetic quark which scatters with a single gluon.}
+	\label{1gluon}
+\end{figure}
+
+\noindent According to the color-kinematic decomposition, the full amplitude for this process can be expressed as
+\begin{equation}
+\mathcal{A}_5(\{p_i,h_i,a_i\})=g^3_s\sum_{\mathcal{P}_3(k,l,1)} T^{a_k}T^{a_l}T^{a_1} A_5(p,k,l,1,q),
+\label{1g}
+\end{equation}
+where the sum is performed over the permutation of the three gluons $k,l,m$. It has been shown in Chapter \ref{review} that we do not have to worry about the helicities of $p$ and $q$ as soon as they have different helicities. Thus, once fixed the amplitude for the whole process does not depend on the helicities of the pair of quark antiquark. Let us first impose the helicity of the first gluon to be negative, and the helicity of the soft and the second gluon to be positive $(h_k,h_l,h_1)=(-,+,+)$. With our choice of helicity, we can write down the expression of the MHV partial amplitude in the expression (\ref{1g}),
+\begin{equation}
+\mathcal{A}_5(-,+,+)=g^3_s \frac{\braket{pk}^3\braket{qk}}{\braket{qp}}  \sum_{\mathcal{P}_3(k,l,1)} \frac{T^{a_k}T^{a_l}T^{a_1}}{\braket{pk} \braket{kl} \braket{l1} \braket{1q}}. 
+\end{equation}
+From this expression, we can now factorize out the partial kinematic form of the parent process $qgg\bar{q}$. in that case, we can break up the sum over the permutation $\mathcal{P}_3$ into a sum over the permutation $\mathcal{P}_2$ which give us the following result:
+\begin{align}
+\mathcal{A}_5(-,+,+)=g^3_s \sum_{\mathcal{P}_2(k,l)} & \left( \frac{T^{a_1}T^{a_k}T^{a_l} \braket{pk}}{\braket{p1} \braket{1k}}+\frac{T^{a_k}T^{a_1}T^{a_l} \braket{kl}}{\braket{k1} \braket{1l}}+\frac{T^{a_k}T^{a_l}T^{a_1} \braket{lq}}{\braket{l1} \braket{1q}} \right)A_4(k,l),
+\end{align}
+where the partial amplitude components of the parent process are defined as
+\begin{equation}
+A(k,l)=\frac{\braket{pk}^3\braket{qk}}{\braket{pk}\braket{kl}\braket{lq}\braket{qp}} \qquad \text{and} \qquad A(l,k)=\frac{\braket{pk}^3\braket{qk}}{\braket{pl}\braket{lk}\braket{kq}\braket{qp}}
+\end{equation}
+In order to completely recover the full expression of the parent process, we have to deal with the color factors. Product of generator matrices can always be written in terms of commutator. The idea is to regroup the color terms for the parent amplitude in such a way that we can factorize them out of the color term of the radiative process. Thus, using the decomposition in Appendix \ref{decompTa} we get 
+\begin{align}
+\mathcal{A}_5(-,& +,+) =g^3_s \sum_{\mathcal{P}_2(k,l)} T^{a_k}T^{a_l}T^{a_1} \left( \soft{p}{k}{1} + \soft{k}{l}{1} + \soft{l}{q}{1} \right)A_4(k,l) \nonumber \\ 
+& +g^3_s \sum_{\mathcal{P}_2(k,l)} \left( [T^{a_1},T^{a_k}T^{a_l}]  \soft{p}{k}{1}+T^{a_k}[T^{a_1},T^{a_l}] \soft{k}{l}{1}  \right) A_4(k,l).
+\label{1gluon2}
+\end{align}
+The first term in this expression is what we call $\mathcal{A}_5(\{\mathcal{A}_4\})$ since it is explicitly function of the parent amplitude $\mathcal{A}_4$. Indeed, the sum over the permutation $\mathcal{P}_2$ is independent of the momentum of the soft radiative gluon, thus we can extract $T^{a_1}$ from the summation and thanks to the Schouten identity (Appendix \ref{schoutenangle}), 
+\begin{equation}
+\soft{p}{k}{1} + \soft{k}{l}{1} + \soft{l}{q}{1}=\soft{p}{q}{1}.
+\end{equation}  
+This expression is interesting in two ways, (i) this expression is invariant under scaling of $\langle p\vert \rightarrow a \langle p\vert$ and $\vert q \rangle \rightarrow b \vert q \rangle$, (ii) it does not depends explicitly on the momentum of the two gluons $k$ and $l$ and can be factorized out from the summation. Thus, the expression in (\ref{1gluon2}) simplifies as
+\begin{align}
+\mathcal{A}_5 &(-,+,+) =g^3_s \left( \sum_{\mathcal{P}_2(k,l)} T^{a_k}T^{a_l}A_4(k,l) \right) T^{a_1} \soft{p}{q}{1}+ \nonumber \\ 
+& g^3_s \sum_{\mathcal{P}_2(k,l)} \left( [T^{a_1},T^{a_k}T^{a_l}]  \soft{p}{k}{1}+T^{a_k}[T^{a_1},T^{a_l}] \soft{k}{l}{1}  \right) A_4(k,l).
+\label{1gluon3}
+\end{align}
+Recall that we are here interested in the case where the soft gluon is emitted collinearly with respect to the outgoing quark while the direction of the outgoing quark is almost collinear to the primordial quark direction. These conditions imply that the angle brackets $\braket{p1}$ and $\braket{1q}$ go to zero. The leading contribution in the expression (\ref{1gluon3}) is therefore dominated by term $\mathcal{A}_5(\{\mathcal{A}_4\})$. In the case where we have to take into account the subleading contribution, we must carry in all of our calculations the terms proportional to $\braket{p1}^{-1}$. As a result for our first MHV amplitude, the expression is given by the following
+\begin{equation}
+\mathcal{A}_5(-,+,+) \approx \mathcal{A}_4(-,+) \times \mathcal{J}_1(s_1),
+\label{Amp1gluon}
+\end{equation}
+where the \emph{soft-collinear current} $\mathcal{J}_1(s_1)$ is defined as
+\begin{equation}
+\mathcal{J}_1(s_1)=g_s \frac{T^{a_1} \braket{pq}}{\braket{p1} \braket{1q}}.
+\end{equation}
+We can now compute the square of the amplitude in (\ref{Amp1gluon}) and take the sum over the colors for our particular configuration of helicity. Multiplying the expression in (\ref{Amp1gluon}) by its conjugate, taking the trace and using the cyclic property of the trace one can show that we get the following expression
+\begin{equation}
+\sum_{col.} \vert \mathcal{A}_5(-,+,+) \vert^2 \approx Tr\left( \vert \mathcal{J}_1(s_1) \vert^2 \times \vert \mathcal{A}_4(-,+)\vert^2 \right).
+\end{equation}  
+One can verify that while extracting the expression of the amplitude squared and summed over the colors for the parent process, the above expression leads to 
+\begin{equation}
+\sum_{col.} \vert \mathcal{A}_5(-,+,+) \vert^2 \approx \frac{Tr\left( \vert \mathcal{J}_1(s_1)\vert^2 \right)}{C_A} \times \sum_{col.} \vert \mathcal{A}_4(-,+)\vert^2.
+\end{equation}
+In order to simplify the notation, let $\vert \overline{\mathcal{J}_1(s_1)} \vert^2=Tr\left( \vert \mathcal{J}_1(s_1)\vert^2\right)$. Now, the computation of the soft-collinear current squared is straight forward,
+\begin{equation}
+\vert \overline{\mathcal{J}_1(s_1)} \vert^2=g^2_s Tr(T^{a_1}T^{a_1}) \left| \soft{p}{q}{1} \right|^2.
+\end{equation}
+Translated the product of square and angle brackets into a dot product and evaluating the color trace in terms of the Casimir operator, it follows that 
+\begin{equation}
+\sum_{col.} \vert \mathcal{A}_5(-,+,+) \vert^2 \approx g^2_s \frac{C_F}{2} \frac{(p q)}{(p s_1) (s_1 q)} \sum_{col.} \vert \mathcal{A}_4(-,+)\vert^2.
+\end{equation}
+In order to get the distribution of the radiative gluon emission for a single emission, we have to sum the amplitude over all possible helicity configurations. Let us recall that (i) $\mathcal{A}_5(-,-,-)= \mathcal{A}_5(+,+,+)=0$ and (ii ) $\mathcal{A}_5(h_k,h_l,h_1)= \mathcal{A}^*_5(-h_k,-h_l,-h_1)$. The later implies that $\vert \mathcal{A}_5(h_k,h_l,h_1) \vert^2= \vert \mathcal{A}^*_5(-h_k,-h_l,-h_1)\vert^2$. With these simplifications, we have the following expression
+\begin{equation}
+\sum_{hel.} \vert \mathcal{A}_5(h_k,h_l,h_1) \vert^2=2\left( \vert \mathcal{A}_5(-,+,+) \vert^2 + \vert \mathcal{A}_5(+,-,+) \vert^2+ \vert \mathcal{A}_5(+,+,-) \vert^2 \right).
+\end{equation}
+Since we have already computed the case where $(h_k,h_l,h_1)=(-,+,+)$, we can straightforwardly derive the expression for the other configurations of MHV amplitudes. Starting from the amplitude level, we have
+\begin{align}
+\mathcal{A}_5(+,-,+) & =g^3_s \frac{\braket{pl}^3\braket{ql}}{\braket{qp}}  \sum_{\mathcal{P}_3(k,l,1)} \frac{T^{a_k}T^{a_l}T^{a_1}}{\braket{pk} \braket{kl} \braket{l1} \braket{1q}}, \\
+\mathcal{A}_5(+,+,-) &=g^3_s \frac{\braket{p1}^3\braket{q1}}{\braket{qp}}  \sum_{\mathcal{P}_3(k,l,1)} \frac{T^{a_k}T^{a_l}T^{a_1}}{\braket{pk} \braket{kl} \braket{l1} \braket{1q}}. 
+\end{align}
+The contribution from the case where the soft radiative gluon has the minus helicity is negligibly small due to the fact that both $\braket{p1}$ and $\braket{q1}$ go to zero in the collinear approximation. We can therefore neglect $\mathcal{A}_5(+,+,-)$ and consider the case where the helicity of the gluon $k$ and $l$ are flipped. In the same way, flipping the helicity of the two gluons involved in the hard scattering is equivalent to swapping the two gluons, in this case to swapping $k$ and $l$. Furthermore, by taking the same approach as before it is straight forward to show that the amplitude squared summed over the colors is given by
+\begin{equation}
+\sum_{col.} \vert \mathcal{A}_5(+,-,+) \vert^2 \approx g^2_s \frac{C_F}{2} \frac{(p q)}{(p s_1) (s_1 q)} \sum_{col.} \vert \mathcal{A}_4(+,-)\vert^2.
+\end{equation} 
+Therefore, the full amplitude squared for the process with emission of single radiative gluon can be expressed as 
+\begin{equation}
+\left| \overline{\mathcal{A}_5(\{p_i,h_i,a_i\})} \right|^2 \approx g^2_s \, C_F \frac{(p q)}{(p s_1) (s_1 q)} \left| \overline{\mathcal{A}_4(\{p_j,h_j,a_j\})}  \right|^2. 
+\end{equation}
+From this expression, one can deduce the differential probability distribution that a radiated soft gluon is emitted collinearly with respect to the incoming and the outgoing quark. 
+
+\subsection{Two radiative gluon emission}
+\label{2radiative}
+
+In the previous section, we computed the probability distribution that the soft radiative gluon can be emitted from the high energetic quark with an eikonal trajectory. We found that at the leading approximation, the distribution follows the Poisson distribution. In this section, we compute the case where we have two emission of soft radiative gluons. We now have to divide our calculation into two main parts. We first compute the MHV amplitudes involved in the process and then compute the Next-to Maximally Helicity Violating (NMHV) contributions. 
+
+Let us now label the momentum of the second bremsstrahlung gluon to be $s_2$ as represented in the Figure. From the color kinematic duality, the general expression for the process with emission of two soft radiative gluons is given by 
+\begin{equation}
+\mathcal{A}_6(\{p_i,h_i,a_i\})=g^3_s\sum_{\mathcal{P}_4(k,l,1,2)} T^{a_k}T^{a_l}T^{a_1}T^{a_2} A_6(p,k,l,1,2,q),
+\label{2g}
+\end{equation}
+We see that in contrast to the calculation of MHV amplitudes, the computation of the NMHV amplitudes arises too much complications. As it has been shown in the previous section, partial amplitudes have a general form in the maximally helicity violating.
+\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture}[scale=0.89]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [thick] (-0.5,0)--(-2.25,0);
+	\draw [thick] (0.5,0.15)--(2.5,0.45);
+	\draw [gluon, thick] (0.5,-0.15)--(2.5,-0.45);
+	\draw [gluon, thick] (-0.353553391,-0.353553391)--(-1.5,-1.35);
+	\draw [gluon, thick, color=blue] (0.42,0.253553391)--(2.25,1.75);
+	\draw [gluon, thick, color=blue] (-0.25,0.4)--(-1.25,2.1);
+	\node at (-2.5,0) {$p$};
+	\node at (2.65,0.47) {$q$};
+	\node at (2.75,-0.45) {$l$};
+	\node at (-1.75,-1.35) {$k$};
+	\node at (2.45,1.78) {\textcolor{blue}{$s_1$}};
+	\node at (-1.27,2.3) {\textcolor{blue}{$s_2$}};
+	\end{tikzpicture}
+	\caption{MHV diagrammatic representation of the two gluon emission in the $qgg\bar{q}$-process. The soft radiative gluons $s_1$ and $s_2$ ($s_1, s_2 \sim 0$) are assumed to be collinear to the high energetic quark which undergoes a single scattering.}
+	\label{2gluon}
+\end{figure}
+
+
+\subsubsection{MHV amplitudes}
+Let us first consider the following configuration of helicity, $\mathcal{H}_1=(-,+,+,+)$. All the gluons have plus helicities except the gluon with momentum $k$. Also, it has been derived in the computation of the single gluon emission that all other configuration of helicities lead to a vanishing amplitudes except for $\mathcal{H}_2=(+,-,+,+)$. This is due to the fact that $\braket{p1},\braket{p2},\braket{1q}$ and $\braket{2q}$ tend to zero in the collinear limit. For the helicity $\mathcal{H}_1$, the MHV amplitude is given by
+\begin{equation}
+\mathcal{A}_6(\mathcal{H}_1)=g^4_s \frac{\braket{pk}^3\braket{qk}}{\braket{qp}}\sum_{\mathcal{P}_4(k,l,1,2)} \frac{T^{a_k}T^{a_l}T^{a_1}T^{a_2}}{\braket{pk}\braket{kl}\braket{l1}\braket{12}\braket{2q}}.
+\end{equation}
+Similarly to the calculation for the single gluon emission, we can factorize out the partial amplitude component for the parent process. This allows us to break the summation over the permutation $\mathcal{P}_4(k,l,1,2)$ into two summation over the permutation $\mathcal{P}_2(k,l)$ and $\mathcal{P}^{'}_2(1,2)$. This can be expressed mathematically as 
+
+\begin{align}
+\mathcal{A}_6&(\mathcal{H}_1)= g^4_s \sum_{\mathcal{P}_2(k,l)} \sum_{\mathcal{P}^{'}_2(1,2)} \bigg( \frac{T^{a_k}T^{a_l}T^{a_1}T^{a_2} \braket{l2} \braket{kq}}{\braket{l1} \braket{12} \braket{k2} \braket{2q}} + \frac{T^{a_k}T^{a_1}T^{a_l}T^{a_2} \braket{kl} \braket{lq}}{\braket{k1} \braket{1l} \braket{l2} \braket{2q}} + \nonumber \\ 
+& \frac{T^{a_1}T^{a_k}T^{a_l}T^{a_2} \braket{pk} \braket{lq}}{\braket{p1} \braket{1k} \braket{l2} \braket{2q}}+ \frac{T^{a_1}T^{a_2}T^{a_k}T^{a_l} \braket{pk} \braket{1k}}{\braket{p1} \braket{1k} \braket{12} \braket{2q}}+ 
+\frac{T^{a_1}T^{a_k}T^{a_2}T^{a_l} \braket{pk} \braket{kl}}{\braket{p1} \braket{1k} \braket{k2} \braket{2l}} \nonumber \\
+&+\frac{T^{a_k}T^{a_1}T^{a_2}T^{a_l} \braket{k2} \braket{kl}}{\braket{k1} \braket{12} \braket{k2} \braket{2l}} \bigg) A_4(k,l).
+\end{align}
+By decomposing the color factors as shown in the Appendix (\ref{decompTa}), we can decompose the above amplitude as $\mathcal{A}_6(\mathcal{H}_1)=\mathcal{A}_6(\{\mathcal{A}_4\})+\mathcal{A}_6(\text{extra})$, while $\mathcal{A}_6(\{\mathcal{A}_4\})$ has a well ordered color factor and depends explicitly on the amplitude of the parent process which contains the information about the hard scattering. On the other hand, $\mathcal{A}_6(\text{extra})$ contains the extra-terms coming from the ordering of the colors, its full expression is shown in the Appendix (\ref{MHVcalc}). At the leading collinear limit approximation, $\mathcal{A}_6(\text{extra})$ is small compared to $\mathcal{A}_6(\{\mathcal{A}_4\})$ and therefore the expression of the amplitude $\mathcal{A}_6(\mathcal{H}_1)$ is approximatively equivalent to the amplitude $\mathcal{A}_6(\{\mathcal{A}_4\})$.
+\begin{equation}
+\mathcal{A}_6(\mathcal{H}_1) \approx g^4_s \sum_{\mathcal{P}_2(k,l)} \sum_{\mathcal{P}^{'}_2(1,2)} T^{a_k}T^{a_l}T^{a_1}T^{a_2} J(k,l,1,2) A_4(k,l),
+\end{equation} 
+where $J(k,l,1,2)$ is the \emph{partial soft-collinear current} which contains the information about the kinematics of the soft scattering. The partial soft-collinear current can be simplified using the Schouten identity, the full calculation is shown in the Appendix (\ref{MHVcalc}). The result turns out to be an expression independent of the momentum of the two gluons involved in the hard scattering. Thus, we can write down nicely the expression of the amplitude
+\begin{equation}
+\mathcal{A}_6(\mathcal{H}_1) \approx g^4_s \left( \sum_{\mathcal{P}_2(k,l)} T^{a_k} T^{a_l} A_4(k,l)  \right) \left( \sum_{\mathcal{P}^{'}_2(1,2)} T^{a_1} T^{a_2} \frac{\braket{pq}}{\braket{p1} \braket{12} \braket{2q}} \right).
+\end{equation}
+From this expression, we can now introduce the two gluon radiation current $\mathcal{J}_2(s_1,s_2)$. Thus, for the two possible MHV amplitudes we get the following expressions
+\begin{align}
+\mathcal{A}_6(\mathcal{H}_1) & \approx \mathcal{A}_4(-,+) \times \mathcal{J}_2(s_1,s_2), \\
+\mathcal{A}_6(\mathcal{H}_2) & \approx \mathcal{A}_4(+,-) \times \mathcal{J}_2(s_1,s_2).
+\end{align} 
+Similarly to the calculation for the single gluon emission, squaring the above amplitudes and taking the trace leads to the following expression
+\begin{equation}
+\sum_{col.} \left| \mathcal{A}_6(\mathcal{H}_{1/2}) \right|^2 \approx \frac{\vert \overline{\mathcal{J}_2(s_1,s_2)} \vert^2}{C_A} \sum_{col.} \left| \mathcal{A}_4(\mp , \pm) \right|^2.
+\label{2gluonamp}
+\end{equation}
+Computing the term $\vert \overline{\mathcal{J}_2(s_1,s_2)} \vert^2$ directly will be complicated because of the color dependency. Indeed, while taking the square of the current the color components will be mixed. We bypass such computation by computing the square expression in the basis of the colors. Let us then write $\vert \overline{\mathcal{J}_2(s_1,s_2)} \vert^2$ as the way it is shown in (\ref{2gluoncurrent}).
+\begin{equation}
+\vert \overline{\mathcal{J}_2(s_1,s_2)} \vert^2 = g^4_s\mathcal{C}_{sym} (a_1,a_2) K_{sym} (1,2) +g^4_s \mathcal{C}_{asym} (a_1,a_2) K_{asym} (1,2).
+\label{2gluoncurrent}
+\end{equation}
+Therein, the different color configurations are given by $\mathcal{C}_{sym}$ and $\mathcal{C}_{asym}$ (see Equation \ref{C1}, \ref{C2}). Once evaluated, we can write the result in terms of the Casimir operators $C_A,C_F$. On the other hand, the information about the kinematics are carried by $K_{sym}$ and $K_{asym}$ (see Equation \ref{K1}, \ref{K2}).
+\begin{gather}
+\mathcal{C}_{sym} (a_1,a_2) =Tr(T^{a_1}T^{a_2}T^{a_2}T^{a_1})=C_A C^2_F, \label{C1} \\
+\mathcal{C}_{asym} (a_1,a_2) =Tr(T^{a_1}T^{a_2}T^{a_1}T^{a_2})=C_A C^2_F-\frac{1}{2}C^2_A C_F, \label{C2} \\
+K_{sym}(1,2)= \sum_{\mathcal{P}^{'}_2(1,2)} \frac{\braket{pq}}{\braket{p1} \braket{12} \braket{2q}} \frac{[pq]}{[p1] [12] [2q]}, \label{K1} \\
+K_{asym}(1,2)= \sum_{\mathcal{P}^{'}_2(1,2)} \frac{\braket{pq}}{\braket{p1} \braket{12} \braket{2q}} \frac{[pq]}{[p2] [21] [1q]}. \label{K2}
+\end{gather}
+We can simplify further the expression of the current squared using the expression of the color factors. So, we have 
+\begin{equation}
+\vert \overline{\mathcal{J}_2(s_1,s_2)} \vert^2= g^4_s C_AC^2_F \left[ K_{sym}(1,2)+K_{asym}(1,2) \right] -\frac{g^4_s}{2} C^2_A C_F \, K_{asym}(1,2).
+\label{currentsquare}
+\end{equation}
+We can now straightforwardly compute the kinematic terms. One can in particular notice that the color stripped kinematic in the first term contains all the set of permutation similar to the QED case for two soft photons emission. Let us call this term the \emph{partial QED current} $J_{\text{QED}}$ and is evaluated as,
+\begin{align}
+J_{\text{QED}}(1,2) &= \left( \sum_{\mathcal{P}^{'}_2(1,2)} \frac{\braket{pq}}{\braket{p1} \braket{12} \braket{2q}} \right) \left( \sum_{\mathcal{P}^{'}_2(1,2)} \frac{[pq]}{[p1] [12] [2q]} \right) \\
+&= \left( \prod_{i=\{1,2\}} \soft{p}{q}{i}  \right) \left( \prod_{i=\{1,2\}} \frac{[pq]}{[pi] [iq]}\right) \\
+&= \frac{1}{2^2} \prod_{i=\{1,2\}} \frac{(p q)}{(p s_i) (s_i q)}.
+\end{align}
+This expression looks familiar. Indeed, this result is exactly similar to the current squared for the emission of two soft photons in QED (see Section \ref{softQED}). As a difference, the fact that gluons carry color charges appears in the color factor. However, because of the non-Abelian nature of the strong force we have an extra term which also contributes to the expression of the current squared. In the expression (\ref{currentsquare}), this information is contained in $J_{\text{NA}}=K_{asym}$, where NA stands for Non-Abelian. 
+\begin{align}
+J_{\text{NA}}(1,2) &=-\frac{(p q)}{(s_1s_2)} \left( \frac{1}{\braket{p1} \braket{2q} [p2] [1q]} + \frac{1}{\braket{p2} \braket{1q} [p1] [2q]}  \right) \\
+&=-\frac{(p q)}{(s_1 s_2)} \left( \frac{1}{\langle p12p]} +\frac{1}{\langle p21p]}\right) \\
+&=-\frac{(p q)}{(s_1 s_2)} \frac{Tr(\slashed{p} \slashed{s}_1 \slashed{q} \slashed{s}_2)}{2^4\prod_{i=\{1,2\}} (p s_i) (s_i q)}. \label{j3}
+\end{align}
+From the first to the second line, we just used the shorthand notation for the square and angle spinor brackets and noticing that $\langle p12p]^*=\langle p21p]$. From the second to the third line, we evaluated the spinor quantities by performing Dirac traces. The denominator in (\ref{j3}) is a direct consequence of the fact that $\langle p12p]$ and $\langle p21p]$ are complex conjugate of each other.
+
+Collecting all these results, summing over the MHV helicity configurations, the amplitude in the expression (\ref{2gluonamp}) finally becomes
+\begin{align}
+\frac{\vert \overline{\mathcal{A}^{\text{MHV}}_6}\vert^2}{\vert \overline{\mathcal{A}_4}\vert^2} \approx g^4_s \bigg[ \frac{C^2_F}{2^2} \prod_{i=\{1,2\}} \frac{(p q)}{(p s_i) (s_i q)}+ \frac{C_AC_F}{2} \frac{(p q)}{(s_1 s_2)} \frac{Tr(\slashed{p} \slashed{s}_1 \slashed{q} \slashed{s}_2)}{2^4\prod_{i=\{1,2\}} (p  s_i) (s_i q)} \bigg].
+\label{current2}
+\end{align}
+This expression shows that the emission of multiple radiative gluons (in the present case $n=2$ radiative gluons) cannot be taken to be independent. In fact, a gluon can emerge from a gluon line as shown in the Figure. Requiring the gauge field of QCD to commute is equivalent to take the limit where the Casimir factor $C_A$ tends to zero. Therefore, when taking the limit $C_A \rightarrow 0$ we should recover the QED result. Intuitively, this limit makes sense because (i) $C_A$ is the Casimir factor in the adjoint representation of $SU(N)$ and since the theory of QED does not have an adjoint representation it is then natural to take $C_A=0$ (ii) in the standard computation of quark gluon amplitudes, the factor $C_A$ appears when a gluon is emitted from a another gluon line. 
+
+As we can notice, if we take the limit $C_A$ tends to zero in the expression (\ref{current2}) the term from non-Abelian term vanishes and only remains the term which has been resumed in QED. 
+\begin{figure}[!h]
+	\centering
+	\begin{equation*}
+	\begin{aligned}
+	\begin{tikzpicture}[scale=1]
+	\draw [thick] (0,0)--(3,0);
+	\draw [gluon, thick, color=blue] (1,0)--(1,1.65);
+	\draw [gluon, thick, color=blue] (2,0)--(2,1.65);
+	\end{tikzpicture}
+	\end{aligned}
+	\xrightarrow{\hspace*{1.5cm}}
+	\begin{aligned}
+	\begin{tikzpicture}[scale=1]
+	\draw [thick] (0,0)--(3,0);
+	\draw [gluon, thick, color=blue] (1,0)--(1,1.65);
+	\draw [gluon, thick, color=blue] (2,0)--(2,1.65);
+	\end{tikzpicture}
+	\end{aligned}
+	+
+	\begin{aligned}
+	\begin{tikzpicture}[scale=1]
+	\draw [thick] (0,0)--(3,0);
+	\draw [gluon, thick, color=blue] (1.5,0)--(1.5,0.95);
+	\draw [gluon, thick, color=blue] (1.5,0.95)--(0.4,1.65);
+	\draw [gluon, thick, color=blue] (1.5,0.95)--(2.6,1.65);
+	\end{tikzpicture}
+	\end{aligned}
+	\end{equation*}
+	\caption{Independent emission of the two radiative gluons versus the case where all the possible emissions are taken into account.}
+\end{figure}
+
+\subsubsection{NMHV amplitudes}
+
+The summation over the helicities for the case of two gluon emission requires the computation of the N$^k$MHV amplitudes at the first order ($k=1$). In particular, in the case where we have to worry about the helicities of the $4$ gluons, two of the gluons have to have a negative helicity in order to form a NMHV amplitude. As we have seen in the previous computation, flipping the helicities of two gluons is equivalent to flipping the labels. For instance, going from $(-,-,+,+)$ to $(-,+,-,+)$ we swap $k$ and $1$ in the expression of scattering amplitude. As a result, we are only required to compute one configuration of helicity for the NMHV amplitude and let us show that the contribution from the NMHV amplitude can be neglected as it was previously claimed.
+
+Let us first choose the configuration of the helicity to be $\mathcal{H}_3=(-,-,+,+)$. At this only, we only know how to compute MHV amplitudes. Thanks to the BCFW formalism we can reduce the computation of NMHV amplitudes into the computation of two MHV-amplitudes. In the BCFW on-shell recursion formalism, the shifted momentum can be choosen arbitrarily. However, with a good choice of helicity and shift we can reduce the number of diagrams that we have to compute. One can notice that choosing the momentum $l$ and $s_1$ to be the reference line, only two diagrams contribute to the expression of the NMHV amplitude. The equation for the $[l,1\rangle$-shift is given in the equation (\ref{2gluonshift}),
+\begin{equation}
+\vert l] \longrightarrow \vert \hat{l}] =\vert l]+z\vert 1], \quad \vert 1\rangle \longrightarrow \vert \hat{1} \rangle =\vert 1\rangle -z\vert l\rangle .
+\label{2gluonshift}
+\end{equation}
+Recall that in the $[l,1\rangle$-shift, the spinors $\vert l\rangle$ and $\vert 1]$ remain unchanged.
+\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture} [scale=0.85]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [gluon, thick] (-0.353553391,0.353553391)--(-1.5,0.953553391);
+	\draw [gluon, thick, color=blue]  (0.353553391,0.353553391)--(1.5,0.953553391);
+	\draw [thick] (-0.353553391,-0.353553391)--(-1.5,-0.953553391);
+	\draw [thick]  (0.353553391,-0.353553391)--(1.5,-0.953553391);
+	\draw [gluon, thick, color=blue] (0.5,-0.05)--(1.75,0);
+	\draw [gluon, thick] (-0.5,-0.05)--(-1.75,0);
+	\draw [thick, color=red, dashed] (0,-0.5)--(0,-1.35);
+	\node at (-1.86,0.953553395) {$l^-$};
+	\node at (-1.86,-0.953553395) {$p^-$}; 
+	\node at (1.86,0.953553395) {\textcolor{blue}{$1^+$}};
+	\node at (1.86,-0.953553395) {$q^+$};
+	\node at (2.2,-0.05) {\textcolor{blue}{$2^+$}};
+	\node at (-2.1,-0.05) {$k^-$};
+	\node at (3,0) {$=$};
+	\begin{scope}[shift={(4.5,0)}]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [gluon, thick] (-0.353553391,0.353553391)--(-0.9,0.9);
+	\draw [thick] (-0.353553391,-0.353553391)--(-0.9,-0.9);
+	\draw [gluon, thick] (0,0.5)--(0,1.3);
+	\draw [thick] (0,-0.5)--(0,-1.3);
+	\draw [gluon, thick] (0.5,0)--(2.4,0);
+	\node at (-1.1,1.3) {$k^-$};
+	\node at (-1.15,-1.15) {$p^-$};
+	\node at (0.7,0.4) {$+$};
+	\node at (0,1.55) {$\hat{l}^-$};
+	\node at (0,-1.55) {$q^+$};
+	\node at (1.45,0.6) {$\hat{P}_{12}$};
+	\node at (1.5,-0.96) {$\mathcal{D}^{(1)}$};
+	\end{scope}
+	\begin{scope}[shift={(7.4,0)}]
+	\draw [thick, pattern=north east lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [gluon, thick, color=blue] (0.353553391,0.353553391)--(0.9,0.9);
+	\draw [gluon, thick, color=blue] (0.353553391,-0.353553391)--(0.9,-0.9);
+	\node at (-0.7,0.4) {$-$};
+	\node at (1.1,1.3) {\textcolor{blue}{$1^+$}};
+	\node at (1.1,-1.1) {\textcolor{blue}{$2^+$}};
+	\end{scope}
+	\begin{scope}[shift={(10.5,0)}]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [gluon, thick] (-0.353553391,0.353553391)--(-0.9,0.9);
+	\draw [gluon, thick] (-0.353553391,-0.353553391)--(-0.9,-0.9);
+	\node at (-1.1,1.3) {$\hat{l}^-$};
+	\node at (-1.1,-1.1) {$k^-$};	
+	\node at (0.7,0.4) {$+$};	
+	\draw [gluon, thick] (0.5,0)--(2.4,0);
+	\node at (-1.65,0) {$+$};
+	\node at (1.45,0.6) {$\hat{P}_{kl}$};
+	\node at (1.5,-0.96) {$\mathcal{D}^{(2)}$};
+	\end{scope}
+	\begin{scope}[shift={(13.4,0)}]
+	\draw [thick, pattern=north east lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [gluon, thick, color=blue] (0.353553391,0.353553391)--(0.9,0.9);
+	\draw [thick] (0.353553391,-0.353553391)--(0.9,-0.9);
+	\draw [gluon, thick, color=blue] (0,0.5)--(0,1.3);
+	\draw [thick] (0,-0.5)--(0,-1.3);
+	\node at (-0.7,0.4) {$-$};
+	\node at (1.1,1.3) {\textcolor{blue}{$2^+$}};
+	\node at (1.15,-1.15) {$q^+$};
+	\node at (0,1.55) {\textcolor{blue}{$1^+$}};
+	\node at (0,-1.55) {$p^-$};
+	\end{scope}
+	\end{tikzpicture}
+	\caption{BCFW diagrammatic representation of the NMHV amplitude for the two gluon emission. The helicity is chosen to be $(-,-,+,+)$ with the $[l,1\rangle$-shift. Notice that the two internal lines $\hat{P}_{kl}$ and $\hat{P}_{12}$ are both on-shell. The two diagrams $\mathcal{D}^{(1)}$ and $\mathcal{D}^{(1)}$ are related by symmetry.}
+	\label{2gluonsemission}
+\end{figure}
+
+If we only focus on the diagram $\mathcal{D}^{(1)}$ in the Figure (\ref{2gluonsemission}), both the two subdiagrams are $\overline{\text{MHV}}$. By taking into account the contribution from the internal line $\braket{12}^{-1}[12]^{-1}$, we can therefore write down the expression of the amplitude for the first diagram 
+\begin{equation}
+\mathcal{D}^{(1)}= \frac{[p\hat{P}_{12}][q\hat{P}_{12}]^3}{[pk] [k \hat{l}] [\hat{l} \hat{P}_{12}] [\hat{P}_{12} q] [qp]} \frac{1}{\braket{12} [12]} \frac{[\hat{1}2]^4}{[\hat{P}_{kl} \hat{1}] [\hat{1}2] [2\hat{P}_{kl}]}.
+\label{NMHV1}
+\end{equation}
+The amplitude shown above still depends on the shifted momenta. In order to get a physical scattering amplitude, we have to get rid of the shifted momenta. Fortunately, the shifted momenta in the expression (\ref{NMHV1}) are only in terms of the square brackets. By taking into account the momentum conservation and using the shift equation in (\ref{2gluonshift}) we can get rid of $\vert \hat{P}_{12}]$ and $\vert \hat{1}]$ (as shown in the Eq. \ref{qb}), the detailed calculations is shown in Appendix (\ref{BCFW1}).
+\begin{equation}
+\vert \hat{P}_{12}] =\frac{\braket{l1}}{\braket{l2}} \vert 1]+\vert 2], \quad \vert \hat{l}]=\vert l]+\frac{\braket{12}}{\braket{l2}} \vert 2].
+\label{qb}
+\end{equation}
+With these two equations, we can now get rid of the shifted momenta in the equation (\ref{MHVcalc}). After rearranging terms and doing some simplifications, we get the final expression of the of the first diagram which contributes to the NMHV amplitudes
+\begin{equation}
+\mathcal{D}^{(1)}=\frac{1}{s_{l12}} \frac{\langle l\vert 1+2\vert p] \langle l\vert 1+2\vert q]^2}{\braket{l1} \braket{12} [qp] [pk] \langle 2\vert l+1\vert k]},
+\end{equation}
+where $s_{l12}=\braket{l1}[l1]+\braket{12}[12]+\braket{2l}[2l]$. For the contribution from the diagram $\mathcal{D}^{(2))}$, we do not have to do the whole computation. In fact, the diagrams $\mathcal{D}^{(1)}$ and $\mathcal{D}^{(2)}$ are related by symmetry wit all the helicities flipped. We can notice that in contrast to the diagram $\mathcal{D}^{(1)}$, $\mathcal{D}^{(2)}$ is composed of two MHV subdiagrams. Thus, in order to get the right expression for $\mathcal{D}^{(2)}$, we swap $k \leftrightarrow 2$, $l \leftrightarrow 1$ and $p \leftrightarrow q$ in the expression of $\mathcal{D}^{(1)}$. In addition, due to the flip of helicities, all the square brackets become angle brackets and vice versa. Thus, the complete NMHV amplitude is expressed as
+\begin{equation}
+\mathcal{A}_6(\mathcal{H}_3) = \frac{1}{s_{l12}} \frac{\langle l\vert 1+2\vert p] \langle l\vert 1+2\vert q]^2}{\braket{l1} \braket{12} [qp] [pk] \langle 2\vert l+1\vert k]}+ \frac{1}{s_{kl1}} \frac{[1\vert l+k\vert q\rangle [l\vert l+k\vert p\rangle^2}{[1l] [lk] \braket{pq} \braket{q2} [k\vert 1+l\vert 2\rangle}.
+\end{equation}
+
+
+\subsection{Three radiative gluon emission}
+
+The previous section showed that the non-Abelian nature of QCD affects the way radiative gluons are emitted from a quark. The evaluation of the momentum distribution for higher number of Bremsstrahlung gluons is important not only for the understanding of the radiative energy loss formalism in QGP but also for the study of the many body problems in QCD. In this section, we aim to compute the probability distribution for the emission of three radiative gluons (see Figure \ref{3gluons}). The amplitude for the process is given by the Expression (\ref{3g}).
+\begin{equation}
+\mathcal{A}_7(\{p_i,h_i,a_i\})=g^5_s \sum_{\mathcal{P}_5(k,l,1,2,3)} \mathcal{C}^{k, \cdots ,3} A_7(p,\cdots ,q), \: \text{with} \: \: \mathcal{C}^{k, \cdots ,3}=T^{a_k}T^{a_l}T^{a_1}T^{a_2}T^{a_3}.
+\label{3g}
+\end{equation}   
+By taking a similar approach as in Section (\ref{2radiative}), we compute separately the MHV and the N$^k$MHV ($k=1,2$) amplitudes. Using the BCFW formalism to compute the N$^k$MHV case, we show that the N$^k$MHV amplitudes are dominated by the MHV ones and therefore can be neglected. 
+\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture}[scale=0.89]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [thick] (-0.5,0)--(-2.25,0);
+	\draw [thick] (0.5,0.15)--(2.5,0.45);
+	\draw [gluon, thick] (0.5,-0.15)--(2.5,-0.45);
+	\draw [gluon, thick] (-0.353553391,-0.353553391)--(-1.5,-1.35);
+	\draw [gluon, thick, color=blue] (0.42,0.253553391)--(2.25,1.35);
+	\draw [gluon, thick, color=blue] (0.075,0.45)--(0.5,2.25);
+	\draw [gluon, thick, color=blue] (-0.25,0.4)--(-1.25,2.1);
+	\node at (-2.5,0) {$p$};
+	\node at (2.65,0.47) {$q$};
+	\node at (2.75,-0.45) {$l$};
+	\node at (-1.75,-1.35) {$k$};
+	\node at (2.45,1.35) {\textcolor{blue}{$s_1$}};
+	\node at (0.5,2.4) {\textcolor{blue}{$s_2$}};
+	\node at (-1.27,2.3) {\textcolor{blue}{$s_3$}};
+	\end{tikzpicture}
+	\caption{MHV diagrammatic representation of the three gluon emission in the $qgg\bar{q}$-process. The soft radiative gluons $s_1$, $s_2$ and $s_3$ ($s_1, s_2,s_3 \sim 0$) are assumed to be collinear to the high energetic quark passing through the QGP medium.}
+	\label{3gluons}
+\end{figure}
+
+
+\subsubsection{MHV amplitudes}
+
+For the MHV calculation, assume that all the gluons have positive helicities and let us denote such configuration by $\mathcal{H}_4$. With this choice of helicity, the correspondent amplitude is given by 
+\begin{equation}
+\mathcal{A}_7 (\mathcal{H}_4)=g^5_s \frac{\braket{pk}^3 \braket{qk}}{\braket{qp}} \sum_{\mathcal{P}_5(k,l,1,2,3)} \frac{T^{a_k}T^{a_l}T^{a_1}T^{a_2}T^{a_3}}{\braket{pk} \braket{kl} \braket{l1} \braket{12} \braket{23} \braket{3q}},
+\label{3MHV}
+\end{equation}
+where the summation is performed over the permutation of the gluons. One can notice that the expansion of this summation will give rise to $120$ terms. Expanding directly this summation and taking the square of the given result will be a complete mess. As it was shown in the previous calculation (for $n=1,2$), one can always express all partial amplitudes in (\ref{3MHV}) terms of the partial amplitudes of the parent process $A_4(k,l)$ and $A_4(l,k)$. In addition, one can always rearrange the color terms in such a way that we can factorize out the color of the hard gluons. These implies that we can write the amplitude for $\mathcal{H}_4$ as $\mathcal{A}_7(\mathcal{H}_4)=\mathcal{A}_7(\{\mathcal{A}_4\})+\mathcal{A}_7(\text{extra})$. In the collinear limit region we are interested in, $\mathcal{A}_7(\{\mathcal{A}_4\})$ dominates over $\mathcal{A}_7(\text{extra})$, thus the amplitude now becomes
+\begin{equation}
+\mathcal{A}_7(\mathcal{H}_4) \approx \mathcal{A}_4(-,+) \times \mathcal{J}_3(1,2,3),
+\end{equation}
+where the three gluon current is given by the Expression (\ref{3current}). The details about these calculations can be found in the Appendix (\ref{MHVcalc3}). 
+\begin{equation}
+\mathcal{J}_3(1,2,3)=g^3_s \sum_{\mathcal{P}^{'}_2(1,2,3)} T^{a_1} T^{a_2} T^{a_3} \frac{\braket{pq}}{\braket{p1} \braket{12} \braket{23} \braket{3q}}.
+\label{3current}
+\end{equation}
+The main task is now to compute the square of this expression traced over the colors. As it was proved during the calculation of the two gluon current squared, the computations become much easier when using the color factors as a basis. In addition, in order to simplify the notation let us denote $Tr(T^{i} \cdots T^{m})=Tr(i \dots m)$. Thus, we get 
+\begin{align}
+\vert \overline{\mathcal{J}_3(1,2,3)} \vert^2= & \mathcal{C}_{sym} K_{sym}+\mathcal{C}_{asym} K_{asym}+ \mathcal{C}_{mix1}K_{mix1} + \nonumber \\ & \mathcal{C}_{mix2}K_{mix2} +\mathcal{C}_{mix3} K_{mix3}+\mathcal{C}_{mix4} K_{mix4}.
+\label{3currentsquare}
+\end{align} 
+In the Expression (\ref{3currentsquare}), $\mathcal{C}_{\_\_}$ is a function of the soft gluon colors while $K_{\_\_}$ is a function of the kinematics. We shall emphasize that each $K_{\_\_}$ in (\ref{3currentsquare}) is has $6$ terms due to the sum over the permutation $\mathcal{P}^{'}_2$, thus $\vert \overline{\mathcal{J}_3(1,2,3)} \vert^2$ has  in total $36$ terms which gives exactly the same as taking the direct square of the Expression (\ref{3current}). The color factors in (\ref{3currentsquare}) are given by the following traces
+\begin{align}
+\begin{array}{ccc}
+\mathcal{C}_{sym}=Tr(123321), & \mathcal{C}_{asym}=Tr(123123), & \mathcal{C}_{mix1}=Tr(123231), \\
+\mathcal{C}_{mix2}=Tr(123312), & \mathcal{C}_{mix3}=Tr(123213), & \mathcal{C}_{mix4}=Tr(123132),
+\end{array}
+\end{align}
+which after evaluation gives the following result 
+\begin{align}
+& \mathcal{C}_{sym}=C_AC^3_F, \hspace*{0.5cm}\mathcal{C}_{asym}=C_AC^3_F+\frac{C^3_AC_F}{2}-\frac{3C^2_AC_F}{2},\\
+& \mathcal{C}_{mix1/2}=C_AC^3_F-\frac{C^2_A C^2_F}{2}, \hspace*{0.3cm} \mathcal{C}_{mix3/4}=C_AC^3_F+\frac{C^2_AC_F}{4}-C^2_AC_F.
+\end{align}
+Notice that all of the color factors contains the expression $C_AC^3_F$ and by combining the associated kinematic terms we get the QED term for the emission of three radiative gluons. Therefore, the expression of the three gluon current squared (\ref{3currentsquare}) simplifies as
+\begin{align}
+\vert \overline{\mathcal{J}_3(1,2,3)} \vert^2 &= C_A C^3_F \, J_{\text{QED}}(1,2,3) + \left( \frac{C^3_AC_F}{2}-\frac{3C^2_AC_F}{2} \right) K_{asym}  \nonumber \\ 
+& -\frac{C^2_A C^2_F}{2} \sum_{I=\{1,2\}} K_{mix(I)} +\left( \frac{C^2_AC_F}{4}-C^2_AC_F \right) \sum_{I=\{3,4\}} K_{mix(I)}.
+\end{align} 
+We are now left with the computation of the kinematic terms in this expression. Let us first start by computing the kinematic with an asymmetric configuration,
+\begin{align}
+K_{asym}=&\sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{\braket{pq}}{\braket{p1} \braket{12} \braket{23} \braket{3q}} \frac{[pq]}{[p3] [32] [21] [1q]}, \\
+=& \frac{(p q)}{2} \sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{1}{(s_1 s_2) (s_2  s_3)} \frac{1}{\langle p1q3p]}. \label{ksym}
+\end{align}
+From the first to the second line, we used the Lorentz invariant product and the shorthand notation for the product of angle and square spinors. Notice that the factor $[(s_1 s_2) (s_2 s_3)]^{-1}$ is invariant under interchange of $1$ and $3$. On the other hand, we know that $\langle p1q3p]^*=\langle p3q1p]$. Thus, we can write $K_{sym}$ entirely in terms of traces and scalar products
+\begin{equation}
+K_{asym}= \frac{(p q )}{2^2} \sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{1}{(s_1 s_2) (s_2 s_3)} \, \frac{Tr(\slashed{p} \slashed{s}_1 \slashed{q} \slashed{s}_3)}{2^4(p s_1) (s_1 q) (p s_3) (s_3 q)}.
+\end{equation}
+While looking at this expression we can see that we have an extra factor of $1/2$, this is because swapping $i$ and $j$ in $Tr(\slashed{p} \slashed{s}_i \slashed{q} \slashed{s}_j)$ will give the same result. 
+
+Let us now move to the computation of $K_{mix1}+K_{mix2}$, 
+\begin{align}
+\sum_{I=\{1,2\}} K_{mix(I)}= &\sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{\braket{pq}}{\braket{p1} \braket{12} \braket{23} \braket{3q}} \frac{[pq]}{[p1] [13] [32] [2q]}+ \\
+& \sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{\braket{pq}}{\braket{p1} \braket{12} \braket{23} \braket{3q}} \frac{[pq]}{[p2] [21] [13] [3q]}.
+\end{align}
+Introducing the Lorentz invariant product and our shorthand notation, we can show that this expression simplifies as 
+\begin{equation}
+\sum_{I=\{1,2\}} K_{mix(I)}= -\frac{(p  q)}{2} \sum_{r=\{p,q\}} \sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{1}{(r s_1) (s_2 s_3)} \frac{1}{\langle r213r]}.
+\end{equation}
+Applying the same argument as above by noticing that $(s_2s_3)$ is invariant under swapping of $2$ and $3$, and $\langle r213r]^*=\langle r312r]$, we get 
+\begin{equation}
+\sum_{I=\{1,2\}} K_{mix(I)}= -\frac{(p q)}{2^2} \sum_{r=\{p,q\}} \sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{1}{(r s_2) (s_2 s_3)} \frac{Tr(\slashed{r} \slashed{s}_2 \slashed{s}_1 \slashed{s}_3)}{2^4(r s_2) (s_2 s_1) (r  s_3) (s_3 s_1)}.
+\end{equation}
+We are now left with the computation of the last kinematic term in (\ref{currentsquare}), which is given by the following expressions
+\begin{align}
+\sum_{I=\{3,4\}} K_{mix(I)}= &\sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{\braket{pq}}{\braket{p1} \braket{12} \braket{23} \braket{3q}} \frac{[pq]}{[p3] [31] [12] [2q]}+ \\
+& \sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{\braket{pq}}{\braket{p1} \braket{12} \braket{23} \braket{3q}} \frac{[pq]}{[p2] [23] [31] [1q]}.
+\end{align}
+With some simplification, one can straightforwardly show that this expression is equivalent to
+\begin{equation}
+\sum_{I=\{3,4\}} K_{mix(I)}= (p q) \sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{1}{(s_1 \cdot s_2)} \left( \frac{1}{\langle p3q231p]}-\frac{1}{\langle p13q23p]} \right).
+\end{equation}
+The above expression is slightly different from the two precedent expressions. In order to simplify this relation, let us first write down the explicit form of $\langle p3q231p]$ and the complex conjugate of $\langle p13q23p]$. 
+\begin{align}
+\begin{array}{l}
+\langle p3q231p] =\braket{p3} [3q] \braket{q2} [23] \braket{31} [1p], \\
+\langle p13q23p]^* = [p1] \braket{13} [3q] \braket{q2} [23] \braket{3p}.
+\end{array}
+\end{align}
+From these expressions, we can infer that $\langle p3q231p]$ and $(-\langle p13q23p])$ are complex conjugate of each other. Thus, we get
+\begin{equation}
+\sum_{I=\{3,4\}} K_{mix(I)}=(p q) \sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{1}{(s_1 s_2)} \frac{Tr(\slashed{p} \slashed{s}_1 \slashed{s}_3 \slashed{q} \slashed{s}_2 \slashed{s}_3)}{2^6(ps_1)(ps_3) (s_1s_3)(s_2s_3)(s_2q)(s_3q)}.
+\end{equation}
+Recall that the term in the denominator comes from expanding $\vert \langle p3q231p]\vert^2$. One can remark in this expression that the kinematic is function of a trace of six component, in contrast to the previous results. 
+
+\subsubsection{N$^2$MHV amplitudes}
+
+This section aim to compute the N$^2$MHV amplitudes for the case of emission of three radiative gluons. In our particular process, N$^2$MHV refers to the class of amplitudes with $4$ negative helicity particles ($1$ quark and $3$ gluons) with $1$ positive helicity gluons and $1$ positive helicity antiquark (see Figure (\ref{NMHV3gluonsemission2})). In our computation, let us choose as helicity $\mathcal{H}_5=(-,-,-,+,+)$. The other helicity configuration where we have $3$ negative helicity gluons and $2$ positive helicity gluons are related to $\mathcal{H}_5$ by interchange of label.
+
+The most efficient way to compute amplitudes beyond MHV is to use the BCFW on-shell formalism. Indeed, the BCFW formalism allows us to construct amplitudes recursively from fewer number of extra-legs. This is very helpful for the computation of the N$^2$MHV amplitude since we have already computed both the MHV and the NMHV amplitudes for $6$ external particles.
+\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture} [scale=0.75]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [gluon, thick] (-0.353553391,0.353553391)--(-1.3,1.653553391);
+	\draw [gluon, thick, color=blue]  (0.353553391,0.353553391)--(1.3,1.653553391);
+	\draw [thick] (-0.353553391,-0.353553391)--(-1.45,-1.53553391);
+	\draw [thick]  (0.353553391,-0.353553391)--(1.45,-1.53553391);
+	\draw [gluon, thick, color=blue] (0,0.5)--(0,1.85);
+	\draw [gluon, thick, color=blue] (0.5,0)--(1.75,0);
+	\draw [gluon, thick] (-0.5,0)--(-1.75,0);
+	\draw [thick, color=red, dashed] (0,-0.5)--(0,-1.75);
+	\node at (0.2,2.2) {\textcolor{blue}{$s^-_1$}};
+	\node at (-1.35,1.773553395) {$l^-$};
+	\node at (-1.5,-1.853553395) {$p^-$}; 
+	\node at (1.65,1.753553395) {\textcolor{blue}{$s^+_2$}};
+	\node at (1.65,-1.853553395) {$q^+$};
+	\node at (2.2,-0.05) {\textcolor{blue}{$s^+_3$}};
+	\node at (-2.1,-0.05) {$k^-$};
+	\node at (3,0) {$=$};
+	\begin{scope}[shift={(4.5,0)}]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [gluon, thick] (-0.353553391,0.353553391)--(-0.99,0.99);
+	\draw [gluon, thick, color=blue] (0.353553391,0.353553391)--(0.99,0.99);
+	\draw [thick] (-0.353553391,-0.353553391)--(-0.9,-0.9);
+	\draw [thick] (0.353553391,-0.353553391)--(0.9,-0.9);
+	\draw [gluon, thick] (0,0.5)--(0,1.3);
+	\draw [gluon, thick] (0.5,0)--(2.4,0);
+	\node at (-1.1,1.3) {$k^-$};
+	\node at (1.3,1.3) {\textcolor{blue}{$\hat{s}^-_1$}};
+	\node at (-1.15,-1.15) {$p^-$};
+	\node at (1.2,-1.2) {$q^+$};
+	\node at (0.9,0.3) {$+$};
+	\node at (0.1,1.6) {$l^-$};
+	\node at (1.65,-2) {$\mathcal{D}^{(1)}$};
+	\node at (1.65,-0.65) {$\hat{P}_{23}$};
+	\end{scope}
+	\begin{scope}[shift={(7.4,0)}]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [gluon, thick, color=blue] (0.353553391,0.353553391)--(0.99,0.99);
+	\draw [gluon, thick, color=blue] (0.353553391,-0.353553391)--(0.9,-0.9);
+	\node at (-0.8,0.3) {$-$};
+	\node at (1.2,1.3) {\textcolor{blue}{$\hat{s}^+_2$}};
+	\node at (1.2,-1.1) {\textcolor{blue}{$s^+_3$}};
+	\end{scope}
+	\begin{scope}[shift={(10.9,0)}]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [gluon, thick, color=blue] (-0.353553391,0.353553391)--(-0.99,1.2);
+	\draw [gluon, thick] (-0.353553391,-0.353553391)--(-0.9,-0.9);
+	\node at (-1.32,1.3) {\textcolor{blue}{$\hat{s}^-_1$}};
+	\node at (-1.1,-1.1) {$l^-$};	
+	\node at (0.7,0.4) {$+$};	
+	\draw [gluon, thick] (0.5,0)--(2.4,0);
+	\node at (-1.65,0) {$+$};
+	\node at (1.55,-0.65) {$\hat{P}_{l1}$};
+	\node at (1.65,-2) {$\mathcal{D}^{(2)}$};
+	\end{scope}
+	\begin{scope}[shift={(13.8,0)}]
+	\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+	\draw [gluon, thick, color=blue] (0.353553391,0.353553391)--(0.9,0.95);
+	\draw [thick] (0.353553391,-0.353553391)--(0.9,-0.9);
+	\draw [gluon, thick, color=blue] (0,0.5)--(0,1.4);
+	\draw [gluon, thick] (0,-0.5)--(0,-1.3);
+	\draw [thick] (0.5,0)--(1,0);
+	\node at (-0.7,0.4) {$-$};
+	\node at (1.1,1.3) {\textcolor{blue}{$s^+_3$}};
+	\node at (1.15,-1.15) {$p^-$};
+	\node at (1.3,0) {$q^+$};
+	\node at (0,1.75) {\textcolor{blue}{$\hat{s}^+_2$}};
+	\node at (0,-1.55) {$k^-$};
+	\end{scope}
+	\end{tikzpicture}
+	\caption{Diagrammatic representation of the BCFW recursion for the computation of N$^2$MHV amplitude with $[1,2\rangle$-shift. The two hard gluons and one soft gluon have negative helicity, where the remaining soft gluons have positive helicity.}
+	\label{NMHV3gluonsemission2}
+\end{figure}
+
+With the $[1,2\rangle$-shift, only two diagrams contribute in the expression of the amplitude given by $\mathcal{A}_7(\mathcal{H}_5)$. The shift equations are shown in (\ref{shift2}), where all the other momentum remain unshifted.
+\begin{equation}
+\vert \hat{1}]=\vert 1]+\vert 2], \quad \text{and} \quad \vert \hat{2}\rangle =\vert 2\rangle -z\vert 1\rangle .
+\label{shift2}
+\end{equation}
+
+Let us first evaluate the first diagram in the Figure (\ref{NMHV3gluonsemission2}). Both the two subdiagrams of $\mathcal{D}^{(1)}$ are anti-MHV and written in its mathematical form, we get
+\begin{equation}
+\mathcal{D}^{(1)}=\frac{[q\hat{P}_{23}]^3[p\hat{P}_{23}]}{[pk] [kl] [l\hat{1}] [\hat{1} \hat{P}_{23}] [\hat{P}_{23} q]} \frac{1}{\braket{12}[12]} \frac{[\hat{2}3]^4}{[\hat{P}_{23} \hat{2}] [\hat{2}3] [3\hat{P}_{23}]}. 
+\end{equation}
+With the on-shell condition of $\hat{P}_{23}$, the momentum conservation and the shift equation we can express the shifted momenta in terms of the normal spinor vectors (Eq. \ref{shiftmom}). The details of this computation is found in the Appendix (\ref{BCFW13}).  
+\begin{equation}
+\vert \hat{1}]=\vert 1]+\frac{\braket{23}}{\braket{13}} \vert 2], \quad \vert \hat{P}_{23}\rangle =\vert 3\rangle, \quad \text{and} \quad \vert \hat{P}_{23}]=\frac{\braket{12}}{\braket{13}} \vert 2]+\vert 3].
+\label{shiftmom}
+\end{equation}
+Combining all these results, putting them back into the expression of $\mathcal{D}^{(1)}$, recalling that $\vert \hat{2}]=\vert 2]$, rearranging the terms and performing some simplification we get the final expression of the first diagram in the N$^2$MHV amplitude:
+\begin{equation}
+\mathcal{D}^{(1)}=\frac{1}{s_{123}} \frac{\langle 1\vert 2+3\vert q]^2 \langle 1\vert 2+3\vert p]}{\braket{12} \braket{23} [pk] [kl] \langle 3\vert 1+2\vert l]}. 
+\end{equation}
+
+On the other hand, the diagram $\mathcal{D}^{(2)}$ is composed of one MHV subdiagram (left) and one NMHV subdiagram (right). Rewriting the MHV part and the internal line in terms of their mathematical expressions, this can be interpreted as 
+\begin{align}
+\mathcal{D}^{(2)}=& \frac{\braket{l \hat{1}^4}}{\braket{l \hat{1}} \braket{\hat{1} \hat{P}_{l1}} \braket{\hat{P}_{l1} l}} \frac{1}{\braket{l1} [l1]} \times \bigg( \begin{aligned}
+\begin{tikzpicture} [scale=0.75]
+\draw [thick, pattern=north west lines, pattern color=black] (0,0) circle [radius=0.5];
+\draw [gluon, thick] (-0.42,0.153553391)--(-1.4,0.79);
+\draw [gluon, thick, color=blue] (0.42,0.153553391)--(1.4,0.79);
+\draw [gluon, thick] (-0.15,0.45)--(-0.7,1.3);
+\draw [gluon, thick, color=blue] (0.15,0.45)--(0.7,1.3);
+\draw [thick] (-0.353553391,-0.353553391)--(-0.9,-0.9);
+\draw [thick] (0.353553391,-0.353553391)--(0.9,-0.9);
+\node at (-0.8,1.43) {$\hat{P}^-$};
+\node at (1.1,1.43) {\textcolor{blue}{$\hat{s}^+_2$}};
+\node at (-1.5,1) {$k^-$};
+\node at (1.7,1) {\textcolor{blue}{$s^+_3$}};
+\node at (-1,-1.15) {$p^-$};
+\node at (1.2,-1.15) {$q^+$};
+\end{tikzpicture} 
+\end{aligned} \bigg) , \\
+\vspace*{-0.75cm}
+= & \frac{\braket{l \hat{1}^4}}{\braket{l \hat{1}} \braket{\hat{1} \hat{P}_{l1}} \braket{\hat{P}_{l1} l}} \frac{1}{\braket{l1} [l1]} \times \mathcal{M}. \label{D}
+\end{align}
+Here, the NMHV diagram is represented by $\mathcal{M}$. Using the expression that we derived for the computation of two radiative gluon emission, the NMHV part is given by the following expression
+\begin{equation}
+\mathcal{M}=\frac{1}{\hat{s}_{12P}} \frac{\langle \hat{P}_{l1}\vert \hat{2}+3\vert q]^2\langle \hat{P}_{l1}\vert \hat{2}+3\vert p]}{\braket{\hat{P}_{l1} \hat{2}} \braket{\hat{2} 3} [qp][pk] \langle 3\vert \hat{P}_{l1}+\hat{2}\vert k]}+\frac{1}{\hat{s}_{k2P}} \frac{[\hat{2}\vert k+\hat{P}_{l1}\vert p\rangle^2 [\hat{2}\vert k+\hat{P}_{l1}\vert q\rangle}{[k\hat{P}_{l1}] [\hat{P}_{l1} \hat{2}] \braket{pq} \braket{q3} [k\vert \hat{P}_{l1}+\hat{2}\vert 3\rangle}.
+\label{equatlava}
+\end{equation}
+Similarly to the previous calculations, the shifted momentum can be suppressed using the on-shell conition of $\hat{P}_{l1}$, the momentum conservation and the shift equations. As a consequence, we have the following expressions
+\begin{equation}
+\vert \hat{1}]=\vert 3]-\frac{[l1]}{[l2]} \vert 2], \: \vert \hat{2}\rangle =\vert 4\rangle +\frac{[l1]}{[l4] \vert 3\rangle}, \: \vert \hat{P}_{l1}\rangle =\vert l\rangle+\frac{[12]}{[l2]} \vert 1\rangle, \: \text{ and } \vert \hat{P}_{l1}]=\vert l].
+\end{equation} 
+Putting back these expression in (\ref{D}) and simplifying terms, the final expression for the N$^2$MHV amplitude is given by 
+\begin{align}
+\mathcal{D}^{(2)} =& \mathtt{S}^1_{l2} \times \left( \frac{[l2]}{\langle 3\vert l+1\vert 2][lk]+ \langle 3\vert 1+2\vert l][k2]} \right) \bigg\lbrace \frac{s_{l12} [2p] - \langle 3\vert l+1\vert 2] [3p]}{s_{l12} [qp] [pk]  [l\vert 1+2\vert 3\rangle} \times \nonumber \\
+& \frac{[l2] \big( s_{l12} - \langle 3\vert l+1\vert 2][3q] \big)^2}{ s_{l12} [l2]+ \langle 3\vert 1+2\vert l][23]+ \langle 3\vert l+1\vert 2][2l]}+ \frac{1}{[kl] \braket{pq} \braket{q3}} \times \nonumber \\
+& \frac{\big( [2\vert k+l+1\vert p\rangle \big)^2 [2\vert k+l+1\vert q\rangle}{s_{l12} [l2]+ \langle k\vert 1+2\vert l][2k]+ \langle k\vert l+1\vert 2][kl]} \bigg\rbrace ,
+\end{align}
+where $\mathtt{S}^1_{l2}=[l2]/([l1][12])$. Indeed, this is because the Expression (\ref{D}) simplifies as $\mathcal{D}^{(2)=}\mathtt{S}^1_{l2} \times \mathcal{M}$. Combining the two diagrams, we get the total expression for the N$^k$MHV ($k=1,2$) amplitudes. $\ast\ast$
+\begin{align}
+\frac{\vert \overline{\mathcal{A}_7}\vert^2}{\vert \overline{\mathcal{A}_4}\vert^2} &= \left( \frac{C_F}{2} \right)^3 \prod_{i=\{1,2,3\}} \frac{(pq)}{(ps_i) (s_iq)} + \left( \frac{C^3_AC_F-3C^2_AC_F}{2^3} \right) (p q ) \sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{1}{(s_1 s_2) (s_2 s_3)} \, \nonumber \\ 
+& \times \frac{Tr(\slashed{p} \slashed{s}_1 \slashed{q} \slashed{s}_3)}{\vert \langle p1q3] \vert^2}+\frac{C^2_A C^2_F}{2^3} (p q) \sum_{r=\{p,q\}} \sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{1}{(r s_2) (s_2 s_3)} \frac{Tr(\slashed{r} \slashed{s}_2 \slashed{s}_1 \slashed{s}_3)}{\vert \langle r213]\vert^2} \nonumber \\
+& +\left( \frac{C^2_AC_F}{4}-C^2_AC_F \right)  (p q) \sum_{\mathcal{P}^{'}_2(1,2,3)} \frac{1}{(s_1 s_2)} \frac{Tr(\slashed{p} \slashed{s}_1 \slashed{s}_3 \slashed{q} \slashed{s}_2 \slashed{s}_3)}{\vert \langle p13q23]\vert^2}.
+\end{align}
